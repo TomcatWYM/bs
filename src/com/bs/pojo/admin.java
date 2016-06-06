@@ -24,6 +24,7 @@ public class admin {
 	private String name;//姓名
 	@Column
 	private String password;//密码
+
 	public String getId() {
 		return id;
 	}
