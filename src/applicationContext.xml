@@ -18,11 +18,12 @@
 	<bean id="sessionFactory"
 		class=" org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
+		<property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+        <property name="packagesToScan" value="com.bs.pojo"/>
 	</bean>
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
 		<property name="url" value="${url}" />  
-        <property name="username" value="${username}" />  
+        <property name="username" value="root" />
         <property name="password" value="${password}" />  
         <property name="driverClassName" value="${driverClassName}" />  
         
@@ -36,7 +37,7 @@
 	<!-- 配置声明式的事务管理（采用基于注解的方式） -->
 	<bean id="txManager"
 		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
-		<property name="sessionFactory" ref="sessionFactory"></property>
+		<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
 	<tx:annotation-driven transaction-manager="txManager" />  
 	
