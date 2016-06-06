@@ -1,0 +1,46 @@
+@CHARSET "utf-8";
+.head_no{
+	height: 20px;
+	width: auto;
+	text-align:center;
+	background-color: #ddd;
+}
+
+.top{
+	margin-top: 10px;
+}
+.show_p{
+	margin: 10px 0px;
+}
+.option{
+	margin-top: 50px;
+	float: right;
+}
+.option li{
+	margin-top: 10px;
+}
+.font_center{
+	text-align: center;
+}
+.div_border{
+	border:1px solid #F90;
+}
+.select_table button{
+	margin-top: 5px
+}
+.tiku_op{
+	padding:5px;
+	background-color: #f5f5f5;
+}
+.tiku_op input{
+	width:80px;
+	height:40px;
+	background-color: #f1f7f9;
+	border: 0px;
+	color: #5bc0de;
+}
+.small_border {
+	border: 1px solid #D3D3D3;
+	padding: 10px;
+	text-align: left;
+}

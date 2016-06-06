@@ -1,0 +1,97 @@
+@CHARSET "utf-8";
+
+.container {
+	margin-top: 80px;
+}
+.top{
+	margin-top: 10px;
+}
+.pad {
+	padding: 5px;
+	margin-top: 10px;
+}
+
+.one {
+	width: 10px;
+	float: left;
+}
+
+.two {
+	margin-left: 10px;
+	width: 284px;
+}
+
+.left_carte {
+	border: 0 px solid #cee3e9;
+	background: #f1f7f9;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.left_color li {
+	margin-top: 4px;
+	width: 10px;
+	height: 45px;
+}
+
+.left_word {
+	padding: 3px;
+}
+
+.left_word li {
+	cursor: pointer;
+	font-size: 20px;
+	padding: 10px;
+	font-family: "方正行楷";
+}
+
+.left_word li:hover {
+	color: #f90 !important;
+	background-color: #fff;
+}
+
+.show_color {
+	background-color: #FF5F3E;
+}
+
+.small_border {
+	border: 1px solid #D3D3D3;
+	padding: 10px;
+	text-align: left;
+}
+.left_div_shuzi{
+	width: 25px;
+	height: 35px;
+	padding: 0px !important;
+}
+.left_div_shuzi img{
+	width: 20px;
+	height: 30px;
+}
+.no_pad{
+	padding: 0px;
+}
+.div_one{
+	width: 25px;
+	height: 35px;
+	float: left;
+}
+.div_two{
+	margin-left: 25px;
+	 padding: 8px 0px 3px 0px;
+	 text-align: left;
+}
+.select_table button{
+	margin-top: 5px
+}
+.tiku_op{
+	padding:5px;
+	background-color: #f5f5f5;
+}
+.tiku_op input{
+	width:80px;
+	height:40px;
+	background-color: #f1f7f9;
+	border: 0px;
+	color: #5bc0de;
+}

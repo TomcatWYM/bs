@@ -1,0 +1,18 @@
+@CHARSET "utf-8";
+.postion{
+	padding: 20px 0px;
+}
+.panel{
+	background-color: #f5f5f5;
+}
+.panel-default{
+	border-color: #f90;
+	border-width: 5px;
+}
+.font_size{
+	font-size: 25px;
+}
+.font_size i{
+	color:#f90;
+	font-size: 15px;
+}

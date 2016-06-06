@@ -1,0 +1,150 @@
+@CHARSET "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body { background:#fff; color:#555; font-size:14px; font-family:"microsoft yahei";overflow-x: hidden;}
+td,th,caption { font-size:14px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%;font-family:"microsoft yahei"; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#555; text-decoration:none; cursor:pointer ; }
+img { border:none; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font:14px "microsoft yahei"; }
+table { border-collapse:collapse; }
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+.clear{clear:both}
+.right{
+	float:right;
+}
+.left{
+	float: left;
+}
+.prev{
+	padding: 0 !important;
+}
+ 
+.button-Blue{
+	background:#1aa1e3 !important;
+	border: none !important;
+	color: #fff !important;
+}
+.button-yellow{
+	padding: 5px 12px;
+	background: #faa145 !important;
+	border: none !important;
+	color: #fff !important;
+}
+.button-white{
+	padding: 5px 12px;
+	background: #fff !important;
+	border:1px solid #dedede !important;
+}
+.btn-pre{
+	padding: 3px 10px;
+}
+.button_three_1{
+	border: none;
+	cursor: pointer;
+	padding:6px 22px;
+	background: #00a0e6;
+	color: #fff;
+	font-size: 14px;
+	border-radius:3px;
+}
+.button_three_2{
+	border: none;
+	cursor: pointer;
+	padding: 6px 22px;
+	background: #939393;
+	color: #fff;
+	font-size: 14px;
+	margin:0 8px;
+	border-radius:3px;
+}
+/*杈规*/
+.frame{
+	border: 1px solid #dedede;
+	padding:2px;
+}
+/*椤堕儴鍙充晶鐗堥潰鍒囨崲灏忓浘鏍�/
+.switch{
+	padding-left:15px;
+}
+.switch img{
+	padding-bottom: 3px;
+	padding-right: 2px;
+}
+/*鏂板缓鍒犻櫎鍥炬爣*/
+.icon-plus,.icon-trash{
+	right: 3px;
+}
+.icon-trash{
+	top: 2px;
+}
+/*鏃ユ湡鍥炬爣*/
+.date{
+	padding-left: 5px;
+	padding-bottom: 4px;
+}
+/**浠ヤ笅涓哄紑鍙戞坊鍔狅紝璇峰皢寮�彂娣诲姞鐨勬牱寮忓姞鍏ュ埌璇ユ爣绀轰笅杈癸紝渚夸簬鍖哄垎闈欐�椤靛師鏈夋牱寮忥紝鏂逛究鏇存柊***/
+/* 閿�璇�*/
+.error-icon {
+	display: inline-block;
+	background: url("../images/login-logic-icons.png") no-repeat 0 0;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin: -4px 5px 0 5px;
+}
+
+.warning-icon {
+	display: inline-block;
+	background: url("../images/login-logic-icons.png") no-repeat -37px 0px;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin: -4px 5px 0 5px;
+}
+
+.warning-green-icon {
+	display: inline-block;
+	background: url("../images/login-logic-icons.png") no-repeat -55px 0px;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin: -4px 5px 0 5px;
+}
+
+.success-icon {
+	display: inline-block;
+	background: url("../images/login-logic-icons.png") no-repeat -74px 0;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin: -4px 5px 0 5px;
+}
+.hand {
+  cursor: pointer;
+}
+.table_color1 {
+	background-color:#f3f3f5;
+}
+.table_color2 {
+	background-color:white;
+}
+.m_c{
+	margin-top: 15px;
+}
+.hr_footer{
+	margin-left:5%;
+	margin-top:20px;
+	width: 90%;
+	height: 2px;
+	background-color: #CFCFCF
+}
+.div_fotter{
+	margin-bottom:30px;
+	text-align: center;
+}
+.container{
+	margin-top: 65px;
+}
