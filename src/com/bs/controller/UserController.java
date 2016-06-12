@@ -1,15 +1,10 @@
 package com.bs.controller;
 
-import com.bs.pojo.user;
+import com.bs.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
@@ -31,11 +26,11 @@ public class UserController extends BaseController {
      */
     @RequestMapping("/login.do")
     public String login(
-             user user,
-             HttpSession session,
-             Model model
+            User user,
+            HttpSession session,
+            Model model
     ){
-        user u = userService.login(user);
+        User u = userService.login(user);
         //登陆成功
         if(u!=null){
             session.setAttribute("user", u);	//把用户信息添加到session中，跳转到主页面
@@ -48,7 +43,7 @@ public class UserController extends BaseController {
     }
 
     @RequestMapping("/register.do")
-    public String register(user user){
+    public String register(User user){
         userService.save(user);
         return "index/main";
     }
