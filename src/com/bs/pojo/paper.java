@@ -15,7 +15,7 @@ import javax.persistence.Table;
  
 @Entity
 @Table(name = "paper")
-public class paper {
+public class Paper {
 	@Id
 	@Column(name = "paperid",nullable=false)
 	private String  paperID; 

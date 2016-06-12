@@ -1,6 +1,7 @@
 package com.bs.controller;
 
 import com.bs.service.UserServiceImpl;
+import com.bs.service.interFace.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,5 +19,5 @@ public class BaseController {
     }
 
 	@Autowired
-    protected UserServiceImpl userService;
+    protected UserService userService;
 }

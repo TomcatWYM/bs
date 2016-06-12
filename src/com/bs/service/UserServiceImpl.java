@@ -1,19 +1,20 @@
 package com.bs.service;
 
-import com.bs.pojo.user;
+import com.bs.pojo.User;
 import com.bs.service.interFace.BaseServer;
+import com.bs.service.interFace.UserService;
 import org.springframework.stereotype.Service;
 
 /**
  * Created by Maple on 2016/6/12.
  */
 @Service
-public class UserServiceImpl extends BaseServerImpl<user> implements BaseServer<user> {
+public class UserServiceImpl extends BaseServerImpl<User> implements UserService {
 
-    public user login(user user) {
-        user u = (user) getSessionFactory()
+    public User login(User user) {
+        User u = (User) getSessionFactory()
                 .openSession()
-                .createQuery("from user u where u.email = ? or u.username = ?" +
+                .createQuery("from User u where u.email = ? or u.username = ?" +
                         "and u.password= ? ")
                 .setParameter(0, user.getEmail())
                 .setParameter(1, user.getUsername())
