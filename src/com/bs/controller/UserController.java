@@ -1,9 +1,10 @@
 package com.bs.controller;
 
-import com.bs.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.bs.pojo.User;
 
 import javax.servlet.http.HttpSession;
 
