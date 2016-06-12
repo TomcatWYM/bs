@@ -19,7 +19,7 @@
 		class=" org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:hibernate.cfg.xml"/>
-        <property name="packagesToScan" value="com.bs.pojo"/>
+        <property name="packagesToScan" value="com.bs.base.pojo"/>
 	</bean>
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
 		<property name="url" value="${url}" />  

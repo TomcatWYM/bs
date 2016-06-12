@@ -1,7 +1,6 @@
 package com.bs.service;
 
-import com.bs.pojo.User;
-import com.bs.service.interFace.BaseServer;
+import com.bs.base.pojo.User;
 import com.bs.service.interFace.UserService;
 import org.springframework.stereotype.Service;
 

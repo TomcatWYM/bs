@@ -11,7 +11,7 @@
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">update</property><!-- 自动检查数据库和本类是否相同 -->
         <!-- 声明映射文件 -->
-        <!--<mapping class="com.bs.pojo.admin" />-->
+        <!--<mapping class="com.bs.base.pojo.admin" />-->
 
 	</session-factory>
 
