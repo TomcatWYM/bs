@@ -27,7 +27,7 @@ public class Paper {
 	@Column
 	private String paperQuestionID;//试卷试题id
 	@Column
-	private String type;//试卷类型
+	private String type;//试卷类型(类型_多少_总分数；)
 	@Column
 	private Date creatrDate;//创建时间
 	@Column

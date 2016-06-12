@@ -5,7 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>欢迎到来！</title>
-
 </head>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/common/css/l_reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/common/css/l_supersized.css">
@@ -57,7 +56,7 @@
 			<p style="margin-top: 20px;">如果只是遇见，不能停留，不如不遇见。</p>
 		</div>
 	<div style="position: absolute;;bottom: 0px; margin-left: 450px;">
-	<%@include file="../jsp/footer.jsp"%>
+	<%@include file="footer.jsp"%>
 	</div>
 	</div>
 </body>
@@ -80,6 +79,6 @@
         }
     })
 </script>
-<script type="text/javascript" src="../script/login.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/common/script/login.js"></script>
 
-</html>index.jsp
+</html>
