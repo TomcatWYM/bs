@@ -20,8 +20,9 @@ public class Admin {
 	@Column(name = "id",nullable=false)
 	private String  id; 
 	 
-	@Column
+
 	private String name;//姓 名
+
 	@Column
 	private String password;//密码
 
