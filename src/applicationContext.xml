@@ -10,7 +10,7 @@
      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
      http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
 	<!-- 自动扫描与装配所有的bean -->
-	<context:component-scan base-package="*"></context:component-scan>
+	<context:component-scan base-package="com.bs"></context:component-scan>
 	<!-- 导入配置文件 -->
 	<context:property-placeholder location="classpath:database.properties"></context:property-placeholder>
 

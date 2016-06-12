@@ -6,16 +6,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>欢迎到来！</title>
 </head>
-<link rel="stylesheet" href="../css/l_reset.css">
-<link rel="stylesheet" href="../css/l_supersized.css">
-<link rel="stylesheet" href="../css/l_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/common/css/l_reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/common//css/l_supersized.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/common//css/l_style.css">
+<script type="text/javascript" src="${pageContext.request.contextPath}/common/js/libs/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/common/js/common.js"></script>
 <body  >
 <div class="bg">
 	<div class="page-container">
 		<h1>登录/注册</h1>
-		<form action="" method="post">
+		<form action="${pageContext.request.contextPath}/user/"
+              method="post" id="form">
 			<div>
-				<input type="text" name="username" class="username"
+				<input type="text" name="email" class="email"
 					placeholder="邮箱" autocomplete="off" />
 			</div>
 			<div>
@@ -28,12 +31,12 @@
 					onpaste="return false" />
 			</div>
 			<div>
-				<input type="password" name="password" class="password"
+				<input type="password" name="re-password" class="re-password"
 					placeholder="验证密码" oncontextmenu="return false"
 					onpaste="return false" />
 			</div>
-			<button id="submit" type="button">登录</button>
-			<button id="submit" type="button">注册</button>
+			<button id="login" type="button">登录</button>
+			<button id="register" type="button">注册</button>
 		</form>
 	</div>
 		<div style="margin-top: 100px;">
@@ -46,5 +49,25 @@
 	</div>
 	</div>
 </body>
+<script type="text/javascript">
+    $(function(){
+        $("#login").click(function(e){
+            e.preventDefault();
+            submitForm('login');
+        });
+        $("#register").click(function(e){
+            e.preventDefault();
+            submitForm('register');
+        });
+        function submitForm(type){
+            var action = $("#form").attr('action');
+            var $form = $("#form");
+            $form.attr('action',action+type+'.do');
+            log(action);
+            $form.submit();
+        }
+    })
+</script>
 <script type="text/javascript" src="../script/login.js"></script>
-</html>
+
+</html>index.jsp
