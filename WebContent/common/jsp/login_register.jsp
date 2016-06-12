@@ -9,6 +9,13 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/common/css/l_reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/common/css/l_supersized.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/common/css/l_style.css">
+<style type="text/css">
+    .userType{
+        width:50px !important;
+        height: 13px !important;
+
+    }
+</style>
 <script type="text/javascript" src="${pageContext.request.contextPath}/common/js/libs/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/common/js/common.js"></script>
 <body  >
@@ -35,6 +42,10 @@
 					placeholder="验证密码" oncontextmenu="return false"
 					onpaste="return false" />
 			</div>
+            <div>
+                <input class="userType" type="radio" value="student" name="userType" checked>学生
+                <input class="userType" type="radio" value="teacher" name="userType">教师
+            </div>
 			<button id="login" type="button">登录</button>
 			<button id="register" type="button">注册</button>
 		</form>

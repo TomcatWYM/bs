@@ -1,6 +1,8 @@
 package com.bs.controller;
 
 import com.bs.service.UserServiceImpl;
+import com.bs.service.interFace.StudentService;
+import com.bs.service.interFace.TeacherService;
 import com.bs.service.interFace.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,4 +22,10 @@ public class BaseController {
 
 	@Autowired
     protected UserService userService;
+
+    @Autowired
+    protected StudentService studentService;
+
+    @Autowired
+    protected TeacherService teacherService;
 }
