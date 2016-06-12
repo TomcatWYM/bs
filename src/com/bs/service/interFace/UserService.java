@@ -1,6 +1,6 @@
 package com.bs.service.interFace;
 
-import com.bs.base.pojo.User;
+import com.bs.pojo.User;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

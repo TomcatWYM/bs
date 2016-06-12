@@ -2,33 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4795924-f2ea-4a3a-b0c8-bb54972976ba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bs/base/pojo/Admin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bs/base/pojo/Article.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bs/base/pojo/ClassInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bs/base/pojo/Classess.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bs/base/pojo/Discuss.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bs/base/pojo/DiscussComment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bs/base/pojo/Message.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bs/base/pojo/Paper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bs/base/pojo/PaperQuestion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bs/base/pojo/User.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/bs/pojo/admin.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/bs/pojo/article.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/bs/pojo/classInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/bs/pojo/classess.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/bs/pojo/discuss.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/bs/pojo/discussComment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/bs/pojo/message.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/bs/pojo/paper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/bs/pojo/paperQuestion.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/bs/pojo/user.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/applicationContext.xml" afterPath="$PROJECT_DIR$/src/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bs/controller/UserController.java" afterPath="$PROJECT_DIR$/src/com/bs/controller/UserController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bs/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/bs/service/UserServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bs/service/interFace/UserService.java" afterPath="$PROJECT_DIR$/src/com/bs/service/interFace/UserService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bs/pojo/Grade.java" afterPath="$PROJECT_DIR$/src/com/bs/base/pojo/Grade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bs/base/pojo/Admin.java" afterPath="$PROJECT_DIR$/src/com/bs/pojo/Admin.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bs/base/pojo/Article.java" afterPath="$PROJECT_DIR$/src/com/bs/pojo/Article.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bs/base/pojo/ClassInfo.java" afterPath="$PROJECT_DIR$/src/com/bs/pojo/ClassInfo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bs/base/pojo/Classess.java" afterPath="$PROJECT_DIR$/src/com/bs/pojo/Classess.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bs/base/pojo/Discuss.java" afterPath="$PROJECT_DIR$/src/com/bs/pojo/Discuss.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bs/base/pojo/DiscussComment.java" afterPath="$PROJECT_DIR$/src/com/bs/pojo/DiscussComment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bs/base/pojo/Grade.java" afterPath="$PROJECT_DIR$/src/com/bs/pojo/Grade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bs/base/pojo/Message.java" afterPath="$PROJECT_DIR$/src/com/bs/pojo/Message.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bs/base/pojo/Paper.java" afterPath="$PROJECT_DIR$/src/com/bs/pojo/Paper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bs/base/pojo/PaperQuestion.java" afterPath="$PROJECT_DIR$/src/com/bs/pojo/PaperQuestion.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bs/base/pojo/User.java" afterPath="$PROJECT_DIR$/src/com/bs/pojo/User.java" />
     </list>
     <ignored path="bs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,7 +56,7 @@
         </entry>
       </file>
       <file leaf-file-name="Article.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/bs/base/pojo/Article.java">
+        <entry file="file://$PROJECT_DIR$/src/com/bs/pojo/Article.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -76,17 +66,17 @@
         </entry>
       </file>
       <file leaf-file-name="Admin.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/bs/base/pojo/Admin.java">
+        <entry file="file://$PROJECT_DIR$/src/com/bs/pojo/Admin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5292096">
-              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.30068728">
+              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Grade.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/bs/base/pojo/Grade.java">
+        <entry file="file://$PROJECT_DIR$/src/com/bs/pojo/Grade.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
@@ -149,8 +139,8 @@
         <option value="$PROJECT_DIR$/src/com/bs/service/interFace/UserService.java" />
         <option value="$PROJECT_DIR$/src/com/bs/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/bs/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/src/com/bs/pojo/Admin.java" />
         <option value="$PROJECT_DIR$/src/com/bs/base/pojo/Admin.java" />
+        <option value="$PROJECT_DIR$/src/com/bs/pojo/Admin.java" />
       </list>
     </option>
   </component>
@@ -854,7 +844,7 @@
       <option name="number" value="Default" />
       <updated>1465203463535</updated>
       <workItem from="1465203469019" duration="947000" />
-      <workItem from="1465726136580" duration="1087000" />
+      <workItem from="1465726136580" duration="1168000" />
     </task>
     <task id="LOCAL-00001" summary="类名大写1">
       <created>1465726579491</created>
@@ -868,11 +858,17 @@
       <option name="project" value="LOCAL" />
       <updated>1465726989001</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge branch 'master' of https://github.com/MapleWhisper/bs&#10;&#10;Conflicts:&#10;&#9;src/com/bs/controller/BaseController.java&#10;&#9;src/com/bs/pojo/Drade.java&#10;&#9;src/com/bs/service/UserServiceImpl.java&#10;&#9;src/com/bs/service/interFace/UserService.java&#10;">
+      <created>1465727248058</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1465727248058</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2034000" />
+    <option name="totallyTimeSpent" value="2115000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -980,7 +976,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bs/base/pojo/Article.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bs/pojo/Article.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -988,7 +984,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bs/base/pojo/Grade.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bs/pojo/Grade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
@@ -996,10 +992,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bs/base/pojo/Admin.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bs/pojo/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5292096">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.30068728">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding />
         </state>
       </provider>
