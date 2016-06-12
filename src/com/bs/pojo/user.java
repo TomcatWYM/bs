@@ -1,11 +1,12 @@
 package com.bs.pojo;
 
+import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 /**
  * 用户，，老师，学生
  * @author Administrator
@@ -13,11 +14,15 @@ import javax.persistence.Table;
  */
  
 @Entity
-@Table(name = "user")
-public class user {
+@Component
+public class user implements Serializable{
 	@Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "userid",nullable=false)
-	private String  userID;//用戶id(老师t 学生s)
+	private Integer  userID;//用戶id(老师t 学生s)
+
+    @Column(unique = true)
+    private String username;
 	 
 	@Column
 	private String name;//姓名
@@ -33,7 +38,7 @@ public class user {
 	private String sex;//性别
 	@Column
 	private Date birthDate;//出生日期
-	@Column
+	@Column(unique = true)
 	private String email;//邮箱
 	@Column
 	private String adress;//家庭住址
@@ -47,17 +52,27 @@ public class user {
 	private String classessID;//班级id字符串连接
 	@Column
 	private String friendID;//好友id 
-	@Column(columnDefinition="varchar default false")
+	@Column(columnDefinition="varchar(20) default 'false'")
 	private String showRealName;//是否显示真实姓名
-	
-	
-	public String getUserID() {
-		return userID;
-	}
-	public void setUserID(String userID) {
-		this.userID = userID;
-	}
-	public String getName() {
+
+
+    public Integer getUserID() {
+        return userID;
+    }
+
+    public void setUserID(Integer userID) {
+        this.userID = userID;
+    }
+
+    public String getSayForYourself() {
+        return sayForYourself;
+    }
+
+    public void setSayForYourself(String sayForYourself) {
+        this.sayForYourself = sayForYourself;
+    }
+
+    public String getName() {
 		return name;
 	}
 	public void setName(String name) {
@@ -141,5 +156,12 @@ public class user {
 	public void setShowRealName(String showRealName) {
 		this.showRealName = showRealName;
 	}
-	 
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 }
