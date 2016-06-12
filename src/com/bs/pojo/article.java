@@ -13,7 +13,7 @@ import javax.persistence.Table;
  
 @Entity
 @Table(name = "article")
-public class article {
+public class Article {
 	@Id
 	@Column(name = "articleid",nullable=false)
 	private String  articleid; 

@@ -15,7 +15,7 @@ import javax.persistence.*;
  
 @Entity
 @Component
-public class user implements Serializable{
+public class User implements Serializable{
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "userid",nullable=false)

@@ -17,7 +17,7 @@ import javax.persistence.Table;
  
 @Entity
 @Table(name = "classInfo")
-public class classInfo {
+public class ClassInfo {
 	@Id
 	@Column(name = "id",nullable=false)
 	private String  id; 

@@ -12,7 +12,7 @@ import javax.persistence.Table;
  
 @Entity
 @Table(name = "articlecomment")
-public class discussComment {
+public class DiscussComment {
 	@Id
 	@Column(name = "id",nullable=false)
 	private String  id; 
