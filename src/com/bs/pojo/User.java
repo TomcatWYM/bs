@@ -13,47 +13,47 @@ import javax.persistence.*;
  *
  */
  
-@Entity
 @Component
 public class User implements Serializable{
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "userid",nullable=false)
-	private Integer  userID;//用戶id(老师t 学生s)
+	protected Integer  userID;
 
     @Column(unique = true)
-    private String username;
+    protected String username;
 	 
 	@Column
-	private String name;//姓名
+	protected String name;//姓名
 	@Column
-	private String realName;//真实姓名
+	protected String realName;//真实姓名
 	@Column
-	private String sayForYourself;//个性宣言
+	protected String sayForYourself;//个性宣言
 	@Column
-	private String password;//密码
+	protected String password;//密码
 	@Column
-	private String phoneNumber;//电话号码
+	protected String phoneNumber;//电话号码
 	@Column
-	private String sex;//性别
+	protected String sex;//性别
 	@Column
-	private Date birthDate;//出生日期
+	protected Date birthDate;//出生日期
 	@Column(unique = true)
-	private String email;//邮箱
+	protected String email;//邮箱
 	@Column
-	private String adress;//家庭住址
+	protected String adress;//家庭住址
 	@Column
-	private String emailID;//邮编
+	protected String emailID;//邮编
 	@Column
-	private String qq;
+	protected String qq;
 	@Column
-	private String weixin;//微信号码
+	protected String weixin;//微信号码
 	@Column
-	private String classessID;//班级id字符串连接
+	protected String classessID;//班级id字符串连接
 	@Column
-	private String friendID;//好友id 
+	protected String friendID;//好友id 
+	
 	@Column(columnDefinition="varchar(20) default 'false'")
-	private String showRealName;//是否显示真实姓名
+	protected String showRealName;//是否显示真实姓名
 
 
     public Integer getUserID() {
