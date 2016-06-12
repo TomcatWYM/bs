@@ -21,7 +21,7 @@ public class Admin {
 	private String  id; 
 	 
 	@Column
-	private String name;//姓名
+	private String name;//姓 名
 	@Column
 	private String password;//密码
 
