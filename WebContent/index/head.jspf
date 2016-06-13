@@ -65,6 +65,7 @@
        </div>
     </div>
     <div id="header_search">
+        <a href="${pageContext.request.contextPath}/studentCenter/index.do" >学生中心</a>
         <a href="../common/jsp/login_register.jsp" >登录</a>
         /<a href="../common/jsp/login_register.jsp" >注册</a>
     </div>

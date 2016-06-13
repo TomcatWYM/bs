@@ -31,17 +31,17 @@
 								<td><img
 									src="${pageContext.request.contextPath}/teacher/images/comback.png"
 									height="70px" width="70px"></img></td>
-								<td>武玉密</td>
+								<td>${sessionScope.student.username}</td>
 							</tr>
 							<tr>
-								<td><input type="checkbox" id="showRealName">显示真实姓名
+								<td><input type="checkbox" id="showRealName">是否真实姓名${sessionScope.student.realName}
 								</td>
 							</tr>
 							<tr>
-								<td>真实姓名:哈哈</td>
+								<td>真实姓名:${sessionScope.student.realName}</td>
 							</tr>
 							<tr>
-								<td>个性宣言：呵呵</td>
+								<td>个性宣言:${sessionScope.student.sayForYourself}</td>
 							</tr>
 						</table>
 						<div class="list-group " style="margin-top: 10px;">
@@ -68,7 +68,7 @@
 						</div>
 						<div class="row">
 							<div class="panel panel-default" style="margin-left: 10px;">
-								<div class="panel-body">
+								<div class="panel-body" id="panel-body">
 									<!-- 									内容添加 -->
 
 									<!-- 								end -->
@@ -86,6 +86,20 @@
 
 	<%@include file="sendMessageModal.jsp"%>
 	<%@include file="findFriendModal.jsp"%>
+    <script type="text/javascript">
+        $(function(){
+            $(".list-group-item").click(function(){
+                var type = $(this).attr('id');
+                log(type);
+                var $panelBodyContainer = $("#panel-body");
+                var requestUrl = "${pageContext.request.contextPath}/studentCenter/"+type+".do";
+                $.get(requestUrl,{},function(page){
+                    log(page);
+                    $panelBodyContainer.html(page);
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

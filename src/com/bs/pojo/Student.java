@@ -54,7 +54,7 @@ public class Student extends User implements Serializable{
     @Column(unique = true)
     protected String email;//邮箱
     @Column
-    protected String adress;//家庭住址
+    protected String address;//家庭住址
     @Column
     protected String emailID;//邮编
     @Column
@@ -154,12 +154,12 @@ public class Student extends User implements Serializable{
         this.email = email;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String adress) {
+        this.address = adress;
     }
 
     public String getEmailID() {
