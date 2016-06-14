@@ -1,6 +1,7 @@
 package com.bs.controller;
 
 import com.bs.base.enums.UserType;
+import com.bs.pojo.Message;
 import com.bs.pojo.Student;
 import com.bs.pojo.Teacher;
 import com.bs.pojo.User;
@@ -11,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 
 @Controller
@@ -45,6 +47,12 @@ public class StudentCenterController extends BaseController {
             HttpSession session,
             Model model
     ){
+        Student stu = (Student) session.getAttribute("student");
+
+        List<Message> messageSendList = messageService.findSendList(stu.getUserID());
+        List<Message> messageReceiveList = messageService.findReceiveList(stu.getUserID());
+        model.addAttribute("sendList",messageSendList);
+        model.addAttribute("receiveList",messageReceiveList);
         return "student/peopleMessage";
     }
 

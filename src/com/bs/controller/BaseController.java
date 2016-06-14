@@ -1,9 +1,8 @@
 package com.bs.controller;
 
+import com.bs.pojo.FriendShip;
 import com.bs.service.UserServiceImpl;
-import com.bs.service.interFace.StudentService;
-import com.bs.service.interFace.TeacherService;
-import com.bs.service.interFace.UserService;
+import com.bs.service.interFace.*;
 import org.apache.commons.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +18,8 @@ public class BaseController {
     public static final String LOGIN_REGISTER= "common/jsp/login_register";
     public static final String STUDENT_CENTER = "student/studentCenter";
     public static final String PEOPLE_INFO = "student/peopleInfo";
+
+
 
 
     @RequestMapping(value="index.do")
@@ -39,6 +40,13 @@ public class BaseController {
 
     @Autowired
     protected TeacherService teacherService;
+
+    @Autowired
+    protected MessageService messageService;
+
+    @Autowired
+    protected FriendShipService friendShipService;
+
 
     /**
      * 发送错误
