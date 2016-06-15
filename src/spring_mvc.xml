@@ -18,12 +18,20 @@
     <mvc:annotation-driven />  
       
     <!-- 静态资源(js/image)的访问 -->  
-    <mvc:resources location="/js/" mapping="/js/**"/>  
+    <mvc:resources location="/js/" mapping="/js/**"/>
+
+
   
     <!-- 定义视图解析器 -->    
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
         <property name="prefix" value="/"></property>  
         <property name="suffix" value=".jsp"></property>  
-    </bean>  
+    </bean>
+
+    <!-- 配置responseBody 结果返回json数据 -->
+    <bean id="jsonConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" >
+
+    </bean>
 
 </beans>

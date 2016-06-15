@@ -16,6 +16,7 @@ import java.util.List;
 @Repository
 @Transactional
 public interface BaseServer<T> {
+
 	/**
 	 * 保存实体
 	 */
