@@ -14,13 +14,20 @@ public class StudentServiceImpl extends BaseServerImpl<Student> implements Stude
 
     @Override
     public Student login(User user) {
-        Student s = (Student) getSessionFactory()
-                .openSession()
+        Student s = (Student) getSession()
                 .createQuery("from Student u where u.email = ? or u.username = ?" +
                         "and u.password= ? ")
                 .setParameter(0, user.getEmail())
                 .setParameter(1, user.getUsername())
                 .setParameter(2, user.getPassword()).uniqueResult();
+        return s;
+    }
+
+    @Override
+    public Student getByUserName(String username) {
+        Student s = (Student) getSession()
+                .createQuery("from Student u where u.username = ?")
+                .setParameter(0, username).uniqueResult();
         return s;
     }
 

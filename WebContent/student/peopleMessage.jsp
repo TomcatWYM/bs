@@ -13,7 +13,8 @@
         </center>
 
         <c:forEach items="${receiveList}" var="msg">
-            <div class="panel panel-default ${(msg.hasShow==1)?'hasShow':''}" style="margin-top: 5px;">
+            <div class="panel panel-default message-item-panel ${(msg.hasShow==1)?'hasShow':''}"
+                 style="margin-top: 5px;">
                 <div class="panel-body">
                     <div class="row">
                         <font color="#f90"><b>${msg.senderName}</b></font> : ${msg.content}
@@ -24,8 +25,14 @@
                             ${msg.sendDate}
                     </div>
                     <div style="float: right">
-                        <button class="btn btn-default">回复</button>
-                        <button class="btn btn-warning">删除</button>
+                        <c:if test="${msg.messageType=='common'}">
+                            <button class="btn btn-default">回复</button>
+                        </c:if>
+                        <c:if test="${msg.messageType=='friendApply'}">
+                            <button class="btn btn-primary friend-apply-accept-btn" message-id="${msg.id}">同意</button>
+                            <button class="btn btn-danger friend-apply-reject-btn" message-id="${msg.id}">拒绝</button>
+                        </c:if>
+                        <button class="btn btn-warning message-delete-btn" message-id="${msg.id}">删除</button>
                     </div>
 
                 </div>
@@ -64,6 +71,37 @@
 
 </div>
 
+<script type="text/javascript">
+    $(function () {
+        $(".message-delete-btn").on('click', function () {
+            var $btn = $(this);
+            var msgId = $btn.attr('message-id');
+            if (msgId) {
+                $.get("${pageContext.request.contextPath}/message/delete.do", {id: msgId}, function (data) {
+                    ajaxSuccessHandler(data, false, function () {
+                        $btn.parents('.message-item-panel').remove();
+                    });
+                });
+            } else {
+                alert('没有找到要删除的消息');
+            }
+        });
+
+        $(".friend-apply-accept-btn").on('click', function () {
+            var $btn = $(this);
+            var msgId = $btn.attr('message-id');
+            if (msgId) {
+                $.get("${pageContext.request.contextPath}/friendShip/acceptApply.do",
+                        {messageId: msgId},
+                        function (data) {
+                            ajaxSuccessHandler(data);
+                        }
+                )
+            }
+        });
+    });
+
+</script>
 
 
 	

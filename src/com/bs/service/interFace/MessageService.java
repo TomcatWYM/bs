@@ -19,4 +19,6 @@ public interface MessageService extends BaseServer<Message>{
 
 
     void sendUserApplyMessage(Integer userID, Integer friendID);
+
+    void sendApplyAcceptMessage(Integer senderID, Integer receiverID);
 }

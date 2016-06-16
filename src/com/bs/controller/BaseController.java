@@ -1,6 +1,7 @@
 package com.bs.controller;
 
 import com.bs.pojo.FriendShip;
+import com.bs.pojo.Student;
 import com.bs.service.UserServiceImpl;
 import com.bs.service.interFace.*;
 import org.apache.commons.logging.Log;
@@ -8,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpSession;
 
 
 @Controller
@@ -64,5 +67,9 @@ public class BaseController {
     protected String sendError(Model model ,String msg,Log log ,Exception e){
         log.error(msg,e);
         return this.sendError(model,msg);
+    }
+
+    protected Student getStudent(HttpSession session){
+        return (Student) session.getAttribute("student");
     }
 }

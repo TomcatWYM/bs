@@ -12,6 +12,7 @@ import java.util.List;
 @Transactional
 public interface FriendShipService extends BaseServer<FriendShip>{
 
+    FriendShip getByUserIdAndFriendId(Integer userId,Integer friendId);
 
-
+    void accept(Integer messageId);
 }

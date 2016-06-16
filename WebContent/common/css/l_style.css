@@ -24,7 +24,7 @@ body {
     margin: 50px auto 0 auto;
 }
 
-h1 {
+.page-container h1 {
     font-size: 30px;
     font-weight: 700;
     text-shadow: 0 1px 4px rgba(0,0,0,.2);
@@ -37,7 +37,7 @@ form {
     text-align: center;
 }
 
-input {
+.page-container input {
     width: 270px;
     height: 42px;
 	line-height:42px;
@@ -64,11 +64,11 @@ input {
     -ms-transition: all .2s;
 }
 
-input:-moz-placeholder { color: #fff; }
-input:-ms-input-placeholder { color: #fff; }
-input::-webkit-input-placeholder { color: #fff; }
+.page-container input:-moz-placeholder { color: #fff; }
+.page-container input:-ms-input-placeholder { color: #fff; }
+.page-container input::-webkit-input-placeholder { color: #fff; }
 
-input:focus {
+.page-container input:focus {
     outline: none;
     -moz-box-shadow:
         0 2px 3px 0 rgba(0,0,0,.1) inset,
@@ -81,7 +81,7 @@ input:focus {
         0 2px 7px 0 rgba(0,0,0,.2);
 }
 
-button {
+.page-container button {
     cursor: pointer;
     width: 300px;
     height: 44px;
@@ -112,7 +112,7 @@ button {
     -ms-transition: all .2s;
 }
 
-button:hover {
+.page-container button:hover {
     -moz-box-shadow:
         0 15px 30px 0 rgba(255,255,255,.15) inset,
         0 2px 7px 0 rgba(0,0,0,.2);
@@ -124,7 +124,7 @@ button:hover {
         0 2px 7px 0 rgba(0,0,0,.2);
 }
 
-button:active {
+.page-container button:active {
     -moz-box-shadow:
         0 15px 30px 0 rgba(255,255,255,.15) inset,
         0 2px 7px 0 rgba(0,0,0,.2);
