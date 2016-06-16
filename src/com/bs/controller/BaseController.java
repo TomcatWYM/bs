@@ -20,7 +20,8 @@ public class BaseController {
     public static final String ERROR = "common/jsp/error";
     public static final String LOGIN_REGISTER= "common/jsp/login_register";
     public static final String STUDENT_CENTER = "student/studentCenter";
-    public static final String PEOPLE_INFO = "student/peopleInfo";
+    public static final String STUDENT_PEOPLE_INFO = "student/peopleInfo";
+    public static final String STUDENT_FRIEND_LIST = "student/friendList";
 
 
 

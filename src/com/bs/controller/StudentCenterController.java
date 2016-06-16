@@ -1,15 +1,13 @@
 package com.bs.controller;
 
-import com.bs.base.enums.UserType;
 import com.bs.pojo.Message;
 import com.bs.pojo.Student;
-import com.bs.pojo.Teacher;
-import com.bs.pojo.User;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -39,7 +37,7 @@ public class StudentCenterController extends BaseController {
         }
         student = studentService.getById(student.getUserID());
         model.addAttribute("stu",student);
-        return PEOPLE_INFO;
+        return STUDENT_PEOPLE_INFO;
     }
 
     @RequestMapping(value="/message.do")
@@ -54,6 +52,15 @@ public class StudentCenterController extends BaseController {
         model.addAttribute("sendList",messageSendList);
         model.addAttribute("receiveList",messageReceiveList);
         return "student/peopleMessage";
+    }
+    @RequestMapping("/friends.do")
+    public String friendList(
+            HttpSession session
+    ){
+        Student stu = getStudent(session);
+        List<Student> friendList = friendShipService.findFriends(stu.getUserID());
+        session.setAttribute("friendList",friendList);
+        return STUDENT_FRIEND_LIST;
     }
 
 }

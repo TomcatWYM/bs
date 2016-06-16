@@ -47,7 +47,7 @@
 						<div class="list-group " style="margin-top: 10px;">
 							<a class="list-group-item" id="peopleInfo">查看个人信息</a> <a
 								class="list-group-item" id="message">我的消息</a> <a
-								class="list-group-item" id="friend">我的好友</a> <a
+								class="list-group-item" id="friends">我的好友</a> <a
 								class="list-group-item" id="classess">我的班级</a> <a
 								class="list-group-item" id="password"> 密码修改</a> <a
 								class="list-group-item" id="showGrade">考试</a>

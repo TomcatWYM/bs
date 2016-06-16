@@ -17,6 +17,8 @@
 
     }
 </style>
+<script src="${pageContext.request.contextPath}/common/script/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/common/js/common.js" type="text/javascript"></script>
 
 <body>
 <div class="bg">

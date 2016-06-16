@@ -8,6 +8,8 @@ import com.bs.service.interFace.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by Maple on 2016/6/14.
  */
@@ -68,5 +70,21 @@ public class FriendShipServiceImpl extends BaseServerImpl<FriendShip> implements
 
 
 
+    }
+
+    @Override
+    public List<Student> findFriends(Integer userID) {
+        List<Student> studentList =  getSession()
+                .createSQLQuery("select * from student s where s.userid in (" +
+                        "select friendID from friendship  where userid = ?)")
+                .addEntity(Student.class)
+                .setInteger(0,userID)
+                .list();
+        if(studentList!=null && !studentList.isEmpty()){
+            for(Student s : studentList){
+                s.setPassword("***");
+            }
+        }
+        return studentList;
     }
 }

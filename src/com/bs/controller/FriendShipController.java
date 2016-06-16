@@ -24,9 +24,28 @@ public class FriendShipController extends BaseController {
 
     private static final Log logger = LogFactory.getLog(FriendShipController.class);
 
-	@RequestMapping(value="/add.do")
+
+    @RequestMapping(value="/list.do")
     @ResponseBody
-	public BaseResult index(
+    public BaseResult list(
+            @RequestParam(required =  false) Integer userId,
+            HttpSession session
+
+    ){
+        Student stu = null;
+        if(userId==null){   //发送者
+            stu = getStudent(session);
+            userId = stu.getUserID();
+        }
+        List<Student> studentList = friendShipService.findFriends(userId);
+        return BaseResult.createSuccess(studentList);
+    }
+
+
+
+    @RequestMapping(value="/add.do")
+    @ResponseBody
+	public BaseResult addFs(
             @RequestParam(required =  false) Integer userId,
             @RequestParam(required = false) Integer friendId,
             @RequestParam(required= false) String username,

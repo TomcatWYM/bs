@@ -15,6 +15,19 @@ function alert(message){
     $remodal.open();
 }
 
+function alertInfo(message){
+    window.wxc.xcConfirm(message, window.wxc.xcConfirm.typeEnum.info);
+}
+function alertSuccess(message){
+    window.wxc.xcConfirm(message, window.wxc.xcConfirm.typeEnum.success);
+}
+function alertWarning(message){
+    window.wxc.xcConfirm(message, window.wxc.xcConfirm.typeEnum.warning);
+}
+function alertError(message){
+    window.wxc.xcConfirm(message, window.wxc.xcConfirm.typeEnum.error);
+}
+
 
 /**
  * select 可以自动根据 select中的 key 选中对应value的option
@@ -41,11 +54,17 @@ function ajaxSuccessHandler(data,isReload,successCallback,failCallback){
             if(isReload){
                 location.reload();
             }
-            alert(data.message);
-            successCallback(data);
+            alertSuccess(data.message);
+            if(successCallback){
+                successCallback(data);
+            }
+
         }else{
-            alert(data.message);
-            failCallback(data);
+            alertError(data.message);
+            if(failCallback){
+                failCallback(data);
+            }
+
         }
     }
 }
