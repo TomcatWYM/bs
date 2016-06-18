@@ -15,4 +15,8 @@ public class testController {
 		mode.setViewName("common/jsp/login_register");
 		return mode;
 	}
+	public static void main(String[] args) {
+		String s="1;2;";
+		System.out.println(s.split(";").length);
+	}
 }

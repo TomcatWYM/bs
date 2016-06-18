@@ -27,18 +27,31 @@ public class Paper {
 	@Column
 	private String paperQuestionID;//试卷试题id
 	@Column
-	private String type;//试卷类型(类型_多少_总分数；)
+	private String type;//试卷类型(类型_名称_多少_总分数;)
 	@Column
-	private Date creatrDate;//创建时间
+	private Date createDate;//创建时间
 	@Column
 	private Date useDate;//使用时间
 	@Column
 	private int showTime;//显示时间长度
 	@Column
-	private String authorID;//谁组的试卷
+	private int authorID;//谁组的试卷
+	@Column
+	private int allScore;//试卷总分数
 	
 	
-	
+	public Date getCreateDate() {
+		return createDate;
+	}
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+	public int getAllScore() {
+		return allScore;
+	}
+	public void setAllScore(int allScore) {
+		this.allScore = allScore;
+	}
 	public String getPaperID() {
 		return paperID;
 	}
@@ -70,10 +83,10 @@ public class Paper {
 		this.type = type;
 	}
 	public Date getCreatrDate() {
-		return creatrDate;
+		return createDate;
 	}
-	public void setCreatrDate(Date creatrDate) {
-		this.creatrDate = creatrDate;
+	public void setCreatrDate(Date createDate) {
+		this.createDate = createDate;
 	}
 	public Date getUseDate() {
 		return useDate;
@@ -87,10 +100,10 @@ public class Paper {
 	public void setShowTime(int showTime) {
 		this.showTime = showTime;
 	}
-	public String getAuthorID() {
+	public int getAuthorID() {
 		return authorID;
 	}
-	public void setAuthorID(String authorID) {
+	public void setAuthorID(int authorID) {
 		this.authorID = authorID;
 	}
 	

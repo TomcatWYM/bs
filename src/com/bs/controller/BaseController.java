@@ -46,6 +46,8 @@ public class BaseController {
 
     @Autowired
     protected FriendShipService friendShipService;
+    @Autowired
+    protected PaperService paperService;
 
 
     /**
