@@ -1,5 +1,6 @@
 package com.bs.controller;
 
+import com.bs.base.BaseResult;
 import com.bs.base.enums.UserType;
 import com.bs.pojo.Student;
 import com.bs.pojo.Teacher;
@@ -10,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.bs.pojo.User;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 
@@ -80,5 +82,22 @@ public class UserController extends BaseController {
             teacherService.save(new Teacher(user));
         }
         return "common/jsp/login";
+    }
+
+
+    @RequestMapping("/resetPwd.do")
+    public BaseResult resetPed(
+            @RequestParam() String pwd,
+            @RequestParam() String oldPwd,
+            HttpSession session
+    ){
+
+        Student stu = getStudent(session);
+        if(!stu.getPassword().equals(oldPwd)){
+            return BaseResult.createFailure("原密码不正确");
+        }
+        stu.setPassword(pwd);
+        studentService.updatePwd(stu);
+        return BaseResult.createSuccess("修改密码成功");
     }
 }
