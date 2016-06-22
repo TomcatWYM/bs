@@ -1,9 +1,8 @@
- 
+
 	$(function() {
 		 
-		$("#beginPaper").click(function(){
+		$("#begtnCreatePaper").click(function(){
 			var paperName=$("#paperName").val();
-			var beginTime=$("#beginTime").val();
 			var testAllTime=$("#testAllTime").val();
 			var paperNumber=$("#paperNumber").val();
 			var paperTitle=$("#paperTitle").val();
@@ -15,36 +14,9 @@
 				+"_"+$(".questionNumber:eq("+index+")").val()
 				+"_"+$(".questionGrade:eq("+index+")").val()+";";
 			});
-			var paper={
-					title:paperTitle,
-					name:paperName,
-					type:type,
-					createDate:createTime,
-					useDate:beginTime,
-					showTime:testAllTime,
-					allScore:paperNumber
-			};
-			$.ajax({  
-				type: "post", // 请求方式  
-				url: "addPaper.do", //url地址  
-				data:{
-					title:paperTitle,
-					name:paperName,
-					type:type,
-					createDate:createTime,
-					useDate:beginTime,
-					showTime:testAllTime,
-					allScore:paperNumber
-				},//数据  
-
-				success: function (data) {  
-					alert("success");  
-				}, error: function () {  
-					alert("error");  
-				}  
-			}) 
-
-
+			var paperInfo=paperName+"-"+testAllTime+"-"+paperNumber+"-"+paperTitle;
+			 $.post("/bs/paper/addInstruce.do",{"paperInfo":paperInfo,"data":type});
+			 window.location.href = '/bs/paper/paper/item/1.do?cur=1';
 		}) ;
 	});
  

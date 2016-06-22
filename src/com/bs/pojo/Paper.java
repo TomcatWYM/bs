@@ -28,7 +28,7 @@ public class Paper implements Serializable{
 	private String label;			//试卷的标签，方便检索该试卷
 	
 	private Date createDate;		//试卷的生成日期
-	private String auther;			//试卷生成人
+	private Integer teacherID;		//试卷生成人
 	
 	private Integer []singles;		//单选题的题号Id数组
 	private Integer []MultChoices;	//多选题的题号Id数组
@@ -209,13 +209,7 @@ public class Paper implements Serializable{
 		this.question = question;
 	}
 	
-	public String getAuther() {
-		return auther;
-	}
-	public void setAuther(String auther) {
-		this.auther = auther;
-	}
-	
+	 
 	public Integer[] toArray(List<Integer> list){
 		Integer []i = new Integer[list.size()];
 		int index = 0 ;
@@ -223,5 +217,11 @@ public class Paper implements Serializable{
 			i[index++] = tem;
 		}
 		return i;
+	}
+	public Integer getTeacherID() {
+		return teacherID;
+	}
+	public void setTeacherID(Integer teacherID) {
+		this.teacherID = teacherID;
 	}
 }

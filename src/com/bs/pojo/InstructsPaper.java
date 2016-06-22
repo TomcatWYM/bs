@@ -23,7 +23,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Entity
-public class instructsPaper implements Serializable{
+public class InstructsPaper implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "id",nullable=false)
@@ -36,8 +36,23 @@ public class instructsPaper implements Serializable{
 	private Integer allScore;//一道题总成绩
 	@Column
 	private Integer paperScore;//试卷总成绩
+	@Column
+	private String proType;//试题类型
+	@Column
+	private Integer paperID;//大题类型
 	
-	
+	public String getProType() {
+		return proType;
+	}
+	public void setProType(String proType) {
+		this.proType = proType;
+	}
+	public Integer getPaperID() {
+		return paperID;
+	}
+	public void setPaperID(Integer paperID) {
+		this.paperID = paperID;
+	}
 	public String getInstruct() {
 		return instruct;
 	}

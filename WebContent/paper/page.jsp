@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <ul class="pagination">
- 		  <li><a href="${pageContext.request.contextPath}/admin/paper/item/1">首页</a></li>
+ 		  <li><a href="${pageContext.request.contextPath}/paper/paper/item/1.do?cur=1">首页</a></li>
  		  <c:forEach begin="${page.cur-5>=1?page.cur-5:1 }" end="${page.cur+5<=page.sum ? page.cur+5 : page.sum}" var="p" varStatus="s">
  		  	 
  		     <c:if test="${p == page.cur }">

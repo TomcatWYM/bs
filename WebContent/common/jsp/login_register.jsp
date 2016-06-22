@@ -25,7 +25,7 @@
 <body>
 	<div class="bg">
 		<div class="page-container">
-			<h1>登录/注册</h1>
+			<h1>注册</h1>
 			<form action="${pageContext.request.contextPath}/user/" method="post"
 				id="form">
 				<div>
@@ -51,14 +51,8 @@
 						name="userType" checked>学生 <input class="userType"
 						type="radio" value="teacher" name="userType">教师
 				</div>
-				<button id="login" type="button">登录</button>
 				<button id="register" type="button">注册</button>
 			</form>
-		</div>
-		<div style="margin-top: 100px;">
-			<p>If we can only encounter each other rather than stay with each
-				other,then I wish we had never encountered.</p>
-			<p style="margin-top: 20px;">如果只是遇见，不能停留，不如不遇见。</p>
 		</div>
 		<div style="position: absolute;; bottom: 0px; margin-left: 450px;">
 			<%@include file="footer.jsp"%>
@@ -72,8 +66,14 @@
             submitForm('login');
         });
         $("#register").click(function(e){
-            e.preventDefault();
-            submitForm('register');
+        	if($(".password").val()==$(".re-password").val()){
+                e.preventDefault();
+                submitForm('register');
+        	}else{
+        		alert("请输入相同密码！！");
+        	}
+        	
+        	
         });
         function submitForm(type){
             var action = $("#form").attr('action');

@@ -7,13 +7,13 @@
 <title>在线测试</title>
 <%@ include file="../common/jsp/head_file.jspf"%>
 </head>
-<link rel="stylesheet" type="text/css" href="./css/main.css">
-<link type="text/css" href="./css/mscarousel.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/index/css/main.css">
+<link type="text/css" href="${pageContext.request.contextPath}/index/css/mscarousel.css" rel="stylesheet" />
 <body>
-	<%@ include file="./head.jspf"%>
+	<%@ include file="../index/head.jspf"%>
 	<div class="container">
 		<div class="row">
-			<%@ include file="./lunbotu.jspf"%>
+			<%@ include file="../index/lunbotu.jspf"%>
 		</div>
 		<!-- 		图书文章推荐 -->
 		<div class="row m_c">
@@ -25,36 +25,36 @@
 				<div class="row small_border">
 					<div class="col-sm-2">
 						<a href="showbook.jsp"> <img alt="" url=""
-							src="./images/test1.png" class="photo_yuan">作者
+							src="${pageContext.request.contextPath}/index/images/test1.png" class="photo_yuan">作者
 							<p>领域:少年</p> 简介：啊我I啊是的那就是看撒大家拉升
 						</a>
 					</div>
 					<div class="col-sm-2">
-						<img alt="" url="" src="./images/test1.png" class="photo_yuan">作者
+						<img alt="" url="" src="${pageContext.request.contextPath}/index/images/test1.png" class="photo_yuan">作者
 						<p>领域:少年</p>
 						<a title="12345，上山打老虎">简介：</a>
 
 					</div>
 					<div class="col-sm-2">
-						<img alt="" url="" src="./images/test1.png" class="photo_yuan">作者
+						<img alt="" url="" src="${pageContext.request.contextPath}/index/images/test1.png" class="photo_yuan">作者
 						<p>领域:少年</p>
 						<a title="12345，上山打老虎">简介：</a>
 
 					</div>
 					<div class="col-sm-2">
-						<img alt="" url="" src="./images/test1.png" class="photo_yuan">作者
+						<img alt="" url="" src="${pageContext.request.contextPath}/index/images/test1.png" class="photo_yuan">作者
 						<p>领域:少年</p>
 						<a title="12345，上山打老虎">简介：</a>
 
 					</div>
 					<div class="col-sm-2">
-						<img alt="" url="" src="./images/test1.png" class="photo_yuan">作者
+						<img alt="" url="" src="${pageContext.request.contextPath}/index/images/test1.png" class="photo_yuan">作者
 						<p>领域:少年</p>
 						<a title="12345，上山打老虎">简介：</a>
 
 					</div>
 					<div class="col-sm-2">
-						<img alt="" url="" src="./images/test1.png" class="photo_yuan">作者
+						<img alt="" url="" src="${pageContext.request.contextPath}/index/images/test1.png" class="photo_yuan">作者
 						<p>领域:少年</p>
 						<a title="12345，上山打老虎">简介：</a>
 
@@ -70,9 +70,9 @@
 				<div class="row small_border">
 					<div class="row" title="asdasdasd">
 
-						<img alt="" src="./images/1_1.PNG"
+						<img alt="" src="${pageContext.request.contextPath}/index/images/1_1.PNG"
 							style="width: 20px; height: 20px; float: left;"> <a
-							href="./showarticle.jsp" style="float: left">话题标题... </a> 张三
+							href="${pageContext.request.contextPath}/index/showarticle.jsp" style="float: left">话题标题... </a> 张三
 					</div>
 
 				</div>
@@ -84,7 +84,7 @@
 		<div class="row m_c">
 			<div class="row">
 				<div class="col-sm-1">
-					<img alt="" src="./images/left_head.PNG" height="30px;"
+					<img alt="" src="${pageContext.request.contextPath}/index/images/left_head.PNG" height="30px;"
 						width="31px">
 				</div>
 				<div class="col-sm-11" style="margin-left: -50px;">
@@ -97,7 +97,7 @@
 			<div class="row">
 				<div class="col-sm-3" style="background-color: #f90;">
 					<div class="row">
-						<img alt="" src="./images/ziliao.jpg"
+						<img alt="" src="${pageContext.request.contextPath}/index/images/ziliao.jpg"
 							style="margin-left: 40px; margin-top: 10px; border-radius: 20px;"
 							height="200px" width="200px;">
 					</div>
@@ -128,7 +128,7 @@
 								<div class="col-sm-4">1</div>
 								<div class="col-sm-4" style="padding: 5px;">
 									<div class="row">
-										<img src="./images/p2.PNG" width="100px" height="100px"
+										<img src="${pageContext.request.contextPath}/index/images/p2.PNG" width="100px" height="100px"
 											style="border-radius: 50px;" />
 									</div>
 									<div class="row ">
@@ -225,6 +225,6 @@
 	</div>
 	<%@include file="../common/jsp/footer.jsp"%>
 </body>
-<script type="text/javascript" src="./script/jquery.msCarousel-min.js"></script>
-<script type="text/javascript" src="./script/main.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/index/script/jquery.msCarousel-min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/index/script/main.js"></script>
 </html>
