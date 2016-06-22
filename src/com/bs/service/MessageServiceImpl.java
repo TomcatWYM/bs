@@ -78,5 +78,20 @@ public class MessageServiceImpl extends BaseServerImpl<Message> implements Messa
         super.save(message1);
     }
 
+    @Override
+    public void save(Message message) {
+        fillMessageNames(message);
+        super.save(message);
+    }
 
+    public void fillMessageNames(Message message){
+        if(message.getSenderID()!=null && message.getSenderName()==null){
+            Student stu = studentService.getById(message.getSenderID());
+            message.setSenderName(stu.getRealName());
+        }
+        if(message.getReceiverID()!=null && message.getReceiverName()==null){
+            Student stu = studentService.getById(message.getReceiverID());
+            message.setReceiverName(stu.getRealName());
+        }
+    }
 }

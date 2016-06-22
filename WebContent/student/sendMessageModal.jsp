@@ -46,6 +46,7 @@
 
 <script type="text/javascript">
 
+    var $sendMessageModal = $('#sendMessageModal');
     var $friendList = $(".friend-list");
     var $friendSelectedInfo= $(".friend-selected-info");
     var $friendSelectedUserId= $(".friend-selected-userId");
@@ -71,15 +72,18 @@
                     alertWarning('查询好友列表失败');
                 }
             });
+        initModalOnShowEvent();
+        friendSelectEvent();
+        sendMessageEvent();
     });
 
     function initModalOnShowEvent(){
-        alert('ok');
         //模态显示的时候
-        var $sendMessageModal = $('#sendMessageModal');
+
         $sendMessageModal.on('show.bs.modal',function(){
             $friendSelectedInfo.html('');
             $friendSelectedUserId.html('');
+            $messageInputArea.val('');
             $messageInputArea.attr('disabled','disabled');
             $sendMessageBtn.attr('disabled','disabled');
         });
@@ -97,5 +101,27 @@
                 $sendMessageBtn.removeAttr('disabled');
             }
         });
+    }
+
+    function sendMessageEvent(){
+        $('#send-message-btn').click(function() {
+            var userId = $friendSelectedUserId.html();
+            if (userId ) {
+                var content = $messageInputArea.val();
+                if(content){
+                    $.post('${pageContext.request.contextPath}/message/send.do',
+                            {receiverId:userId,content:content},
+                            function(data){
+                                ajaxSuccessHandler(data,false);
+                            }
+                    );
+                }else{
+                    alertError('您还没有输入消息！');
+                }
+            } else {
+                alertError('用户Id不存在！请刷新页面重试');
+            }
+        });
+
     }
 </script>
