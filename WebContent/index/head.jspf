@@ -1,87 +1,42 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link rel="stylesheet" type="text/css"
 	href="../index/css/index_head.css">
-<script type="text/javascript" src="../index/script/main_index.js"></script>
-
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/index/script/main_index.js"></script>
 <div id="header" class="index_head">
 	<div id="header_logo"></div>
 	<div id="header_nav">
 		<ul id="header_menu_list">
-			<li
-				class="header_menu_list header_menu_list_checked header_menu_list_fi"
-				value="index"><a href="./../index/main.jsp">首页</a></li>
+			<li class="header_menu_list header_menu_list_checked " value="index"><a
+				href="${pageContext.request.contextPath}/main/showIndex.do">首页</a></li>
 			<li class="header_menu_list"><span></span><a
-				href="./../index/tiku.jsp">题库</a></li>
+				href="${pageContext.request.contextPath}/index/tiku.jsp">题库</a></li>
 			<li class="header_menu_list"><span></span><a
-				href="./../index/ziliao.jsp">试卷</a></li>
+				href="${pageContext.request.contextPath}/index/ziliao.jsp">试卷</a></li>
 			<li class="header_menu_list"><span></span><a
-				href="./../index/discuss.jsp">讨论区</a></li>
+				href="${pageContext.request.contextPath}/index/discuss.jsp">讨论区</a></li>
 			<li class="header_menu_list"><span></span><a
-				href="./../index/beautifulArticle.jsp">美文</a></li>
+				href="${pageContext.request.contextPath}/index/beautifulArticle.jsp">美文</a></li>
 		</ul>
-		<div id="header_menu_details">
-			<div id="header_menu_details_box">
-				<div id="header_menu_details_mask">
-					<div class="header_detail_container">/**首页区需要隐藏 */</div>
-					<div class="header_detail_container">
-						<div class="header_detail_box">
-							<div class="header_detail_img">
-								<div class="header_detail_imgCover"></div>
-							</div>
-							<p class="header_detail_title">
-								<img src="../index/images/nav_menu_arrow.png" alt="">示例文字
-							</p>
-						</div>
-
-						<div class="clear"></div>
-					</div>
-					<div class="header_detail_container">
-						<div class="header_detail_box">
-							<div class="header_detail_img">
-								<div class="header_detail_imgCover"></div>
-							</div>
-							<p class="header_detail_title">
-								<img src="../index/images/nav_menu_arrow.png" alt="">示例文字
-							</p>
-						</div>
-
-						<div class="clear"></div>
-					</div>
-					<div class="header_detail_container">
-						<div class="header_detail_box">
-							<div class="header_detail_img">
-								<div class="header_detail_imgCover"></div>
-							</div>
-							<p class="header_detail_title">
-								<img src="../index/images/nav_menu_arrow.png" alt="">示例文字
-							</p>
-						</div>
-
-						<div class="clear"></div>
-					</div>
-					<div class="header_detail_container">
-						<div class="header_detail_box">
-							<div class="header_detail_img">
-								<div class="header_detail_imgCover"></div>
-							</div>
-							<p class="header_detail_title">
-								<img src="../index/images/nav_menu_arrow.png" alt="">示例文字
-							</p>
-						</div>
-
-						<div class="clear"></div>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-		</div>
 	</div>
 	<div id="header_search">
-		<a href="${pageContext.request.contextPath}/studentCenter/index.do">学生中心</a>
-		<a href="../common/jsp/login_register.jsp">登录</a> /<a
-			href="../common/jsp/login_register.jsp">注册</a>
-	</div>
+		<c:if test="${sessionScope.student.username!=''}">
+			hi,${ sessionScope.student.username}
+			<a href="${pageContext.request.contextPath}/studentCenter/index.do">学生中心</a>
 
+		</c:if>
+		<c:if test="${sessionScope.teacher.username!=null}">
+			hi,${ sessionScope.teacher.username} 2
+			<a href="${pageContext.request.contextPath}/teacherCenter/index.do">教师中心</a>
+		</c:if>
+		 
+			 
+			<a href="${pageContext.request.contextPath}/common/jsp/login.jsp">登录</a>
+		/<a
+				href="${pageContext.request.contextPath}/common/jsp/login_register.jsp">注册</a>
+
+
+	</div>
 </div>

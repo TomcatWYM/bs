@@ -13,12 +13,42 @@
 
   </head>
   
-  <body>
+  <body  style="background-color: #ddd">
     	<div class="container">
     		 
-    		<div class="row" style="margin-top: 70px">
+    		<div class="row">
     			<div class="col-xs-3">
-					无
+					 <div class="panel panel-default">
+					<div class="panel-heading">试卷名称：${paper.title }</div>
+					<div class="panel-body">
+						<div class="row">考试时间：90分钟</div>
+						<div class="row">标签：${paper.label }</div>
+						<div class="row">
+							<table class="table table-striped">
+								<tr>
+									<td>题型</td>
+									<td>说明</td>
+									<td>数量</td>
+									<td>成绩</td>
+								</tr>
+								<c:forEach items="${instructsList }" var="list">
+									<tr>
+										<td><c:if test="${list.proType=='1' }">单选题</c:if> <c:if
+												test="${list.proType=='2' }">多选题</c:if> <c:if test="${list.proType=='3' }">填空题</c:if>
+											<c:if test="${list.proType=='4' }">简答题</c:if></td>
+										<td>${list.instruct }</td>
+										<td>${list.number }</td>
+										<td>${list.allScore }</td>
+									</tr>
+								</c:forEach>
+							</table>
+						</div>
+						<div class="row">
+						<a id="showModal" class="btn btn-warning" data-toggle="modal" data-target="#myModal"> 生成试卷</a>
+						</div>
+					</div>
+					
+				</div>
     			</div>
     			<div class="col-xs-9">
     					<div class="panel panel-warning">
@@ -29,7 +59,7 @@
 						  		<div class="row">
 						  			<div class="col-xs-8">
 						  				<div class="page-header">
-										  <h1>  <a href="${pageContext.request.contextPath}/paper/paper/item/1"> << 返回试题列表</a>  
+										  <h1>  <a href="${pageContext.request.contextPath}/paper/paper/item/1.do"> << 返回试题列表</a>  
 										  	 <small>继续添加试题</small></h1>
 										</div>
 						  			</div>
@@ -153,10 +183,6 @@
 					    					  </div>	
 					    					  </c:forEach>
 											</div><!-- 简答题 -->
-											<center><a id="showModal" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-													生成试卷</a></center>
-											
-											
 										   </div><!-- col-xs-11 -->
 										   <!--右侧的导航条 -->
 									  		<div class="col-xs-1">
@@ -192,29 +218,33 @@
 					  <div class="form-group">
 					    <label  class="col-xs-2 control-label">试卷标题</label>
 					    <div class="col-xs-8">
-					      <input type="text" class="form-control" id="" name="title">
-					    </div>
-					  </div>
-					  <div class="form-group">
-					    <label  class="col-xs-2 control-label">作者</label>
-					    <div class="col-xs-8">
-					      <input type="text" class="form-control" id="" name="auther">
+					      <input type="text" class="form-control" id="" name="title" value="${paper.title }">
 					    </div>
 					  </div>
 					  
-					 
 					  <div class="form-group">
+					  <div class="col-xs-6">
+					  <ul>
+							<c:forEach items="${instructsList }" var="list">
+									<li class="list-group-item"><c:if test="${list.proType=='1' }">单选题：</c:if> <c:if
+												test="${list.proType=='2' }">多选题：</c:if> <c:if test="${list.proType=='3' }">填空题：</c:if>
+											<c:if test="${list.proType=='4' }">简答题：</c:if>
+										预计 <span class="label label-danger num"> ${list.number } 个</span>
+										
+										 
+									</li>
+								</c:forEach>
+						</ul>
+						</div>
 					    <div class="col-xs-6">
 			  				<ul class="list-group">
-							  <li class="list-group-item">单选题：<span class="label label-danger num">${paperCart.singleNumber}个</span></li>
-							  <li class="list-group-item">多选题：<span class="label label-danger num">${paperCart.multChoiceNumber}个</span></li>
-							  <li class="list-group-item">判断题：<span class="label label-danger num">${paperCart.judgeNumber}个</span></li>
-							  <li class="list-group-item">简答题：<span class="label label-danger num">${paperCart.questionNumber}个</span></li>
+							  <li class="list-group-item">单选题：现有<span class="label label-danger num">${paperCart.singleNumber}个</span></li>
+							  <li class="list-group-item">多选题：现有<span class="label label-danger num">${paperCart.multChoiceNumber}个</span></li>
+							  <li class="list-group-item">判断题：现有<span class="label label-danger num">${paperCart.judgeNumber}个</span></li>
+							  <li class="list-group-item">简答题：现有<span class="label label-danger num">${paperCart.questionNumber}个</span></li>
 							</ul>
 						</div>
-						<div class="col-xs-6">
-							
-						</div>
+						
 					  </div>
 					  
 					</form>

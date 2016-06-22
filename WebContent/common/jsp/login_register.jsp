@@ -21,6 +21,41 @@
 <script src="${pageContext.request.contextPath}/common/js/common.js" type="text/javascript"></script>
 
 <body>
+	<div class="bg">
+		<div class="page-container">
+			<h1>注册</h1>
+			<form action="${pageContext.request.contextPath}/user/" method="post"
+				id="form">
+				<div>
+					<input type="text" name="email" class="email" placeholder="邮箱"
+						autocomplete="off" />
+				</div>
+				<div>
+					<input type="text" name="username" class="username"
+						placeholder="用户名" autocomplete="off" />
+				</div>
+				<div>
+					<input type="password" name="password" class="password"
+						placeholder="密码" oncontextmenu="return false"
+						onpaste="return false" />
+				</div>
+				<div>
+					<input type="password" name="re-password" class="re-password"
+						placeholder="验证密码" oncontextmenu="return false"
+						onpaste="return false" />
+				</div>
+				<div>
+					<input class="userType" type="radio" value="student"
+						name="userType" checked>学生 <input class="userType"
+						type="radio" value="teacher" name="userType">教师
+				</div>
+				<button id="register" type="button">注册</button>
+			</form>
+		</div>
+		<div style="position: absolute;; bottom: 0px; margin-left: 450px;">
+			<%@include file="footer.jsp"%>
+		</div>
+	</div>
 <div class="bg">
     <div class="page-container">
         <h1>登录/注册</h1>
@@ -68,6 +103,15 @@
             e.preventDefault();
             submitForm('login');
         });
+        $("#register").click(function(e){
+        	if($(".password").val()==$(".re-password").val()){
+                e.preventDefault();
+                submitForm('register');
+        	}else{
+        		alert("请输入相同密码！！");
+        	}
+
+
         $("#register").click(function (e) {
             e.preventDefault();
             submitForm('register');

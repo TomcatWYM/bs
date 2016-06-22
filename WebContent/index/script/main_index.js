@@ -1,4 +1,4 @@
-require(["jquery","bootstrap" ],function($,bootstrap){
+ 
 	/*
 	 *初始化部分页面数据
 	 */
@@ -135,4 +135,4 @@ require(["jquery","bootstrap" ],function($,bootstrap){
 		});
 	});//不会自动提升
 
-})
+ 

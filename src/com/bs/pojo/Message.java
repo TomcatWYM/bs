@@ -35,15 +35,14 @@ public class Message {
 	private Integer hasShow = 0;//是否已经显示
 	@Column
 	private Integer senderID;//发送用户id
-
+	@Column
     private String senderName;  //发送者用户名
-
+	@Column
     private String receiverName;    //接受者用户名
-
 	@Column
 	private Integer receiverID;//接受用户id
 
-	@Column(columnDefinition = "DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP")
+	@Column
 	private Date  sendDate;//发送时间
 
     @Column

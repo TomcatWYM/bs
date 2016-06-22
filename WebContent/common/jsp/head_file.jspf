@@ -18,10 +18,10 @@
 <script type="text/javascript"
 	src="../common/script/requirejs-config.js"></script>
 <script type="text/javascript"
+	src="${pageContext.request.contextPath}/common/script/bootstrap/bootstrap.min.js"></script>
         src="../common/script/jquery-1.11.1.min.js"></script>
 <script type="text/javascript"
         src="../common/script/xcConfirm/js/xcConfirm.js"></script>
 
 <script type="text/javascript"
         src="../common/js/common.js"></script>
-	 

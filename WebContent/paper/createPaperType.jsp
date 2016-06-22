@@ -27,13 +27,6 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-sm-2">开始时间：</div>
-								<div class="col-sm-6">
-									<input type="text" class="form-control date_picker"
-										id="beginTime" value="2016-6-4">
-								</div>
-							</div>
-							<div class="row">
 								<div class="col-sm-2">考试时长：</div>
 								<div class="col-sm-6">
 									<input type="text" class="form-control" id="testAllTime"
@@ -50,7 +43,7 @@
 							<div class="row">
 								<div class="col-sm-2">试卷标签：</div>
 								<div class="col-sm-6">
-									<input type="text" class="form-control" name="label" value="例：<test>"
+									<input type="text" class="form-control" name="label" value="test;"
 										id="paperTitle">
 								</div>
 							</div>
@@ -137,7 +130,7 @@
 							</div>
 						</div>
 					</div>
-					<a href="${pageContext.request.contextPath}/paper/paper/item/1.do?cur=1" class="btn btn-primary " id="begtnCreatePaper">开始组卷</a>
+					<a class="btn btn-primary " id="begtnCreatePaper">开始组卷</a>
 					<a href="" class="btn btn-primary"  >返回</a>
 				</div>
 			</div>

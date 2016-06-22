@@ -2,8 +2,10 @@ package com.bs.controller;
 
 import com.bs.pojo.FriendShip;
 import com.bs.pojo.Student;
+import com.bs.pojo.InstructsPaper;
 import com.bs.service.UserServiceImpl;
 import com.bs.service.interFace.*;
+
 import org.apache.commons.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -56,6 +58,8 @@ public class BaseController {
     protected PaperService paperService;
     @Autowired
     protected ProblemService problemService;
+    @Autowired
+    protected InstructsPaperService instructsPaperService ;
 
 
     /**

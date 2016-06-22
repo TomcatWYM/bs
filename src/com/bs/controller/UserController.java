@@ -79,6 +79,6 @@ public class UserController extends BaseController {
         if(user.getUserType().equalsIgnoreCase(UserType.TEACHER.getName())){
             teacherService.save(new Teacher(user));
         }
-        return INDEX;
+        return "common/jsp/login";
     }
 }

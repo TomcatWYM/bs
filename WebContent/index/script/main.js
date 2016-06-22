@@ -1,4 +1,4 @@
-require(["jquery","bootstrap" ],function($,bootstrap){
+ 
 	//轮播图效果
 	var carouselFigure=(function(){
 		 init=function(){
@@ -49,4 +49,3 @@ require(["jquery","bootstrap" ],function($,bootstrap){
 		carouselFigure.init();
 	});
 
-})

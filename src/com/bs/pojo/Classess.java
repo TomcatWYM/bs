@@ -21,7 +21,7 @@ public class Classess {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "id",nullable=false)
-	private String  ID; 
+	private Integer  ID; 
 	 
 	@Column
 	private String name;//班级的名字
@@ -37,10 +37,11 @@ public class Classess {
 	private String headerTeacherID;//班主任id
 	@Column
 	private String paperID;//试卷id
-	public String getID() {
+	 
+	public Integer getID() {
 		return ID;
 	}
-	public void setID(String iD) {
+	public void setID(Integer iD) {
 		ID = iD;
 	}
 	public String getName() {
