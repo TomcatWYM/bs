@@ -29,11 +29,44 @@ public class instructsPaper implements Serializable{
 	@Column(name = "id",nullable=false)
 	private Integer ID;
 	@Column
-	private Integer number;
+	private Integer number;//一道大题总数量
 	@Column
-	private Integer allScore;
+	private String instruct;//试题介绍
 	@Column
-	private Integer paperScore;
+	private Integer allScore;//一道题总成绩
+	@Column
+	private Integer paperScore;//试卷总成绩
 	
+	
+	public String getInstruct() {
+		return instruct;
+	}
+	public void setInstruct(String instruct) {
+		this.instruct = instruct;
+	}
+	public Integer getID() {
+		return ID;
+	}
+	public void setID(Integer iD) {
+		ID = iD;
+	}
+	public Integer getNumber() {
+		return number;
+	}
+	public void setNumber(Integer number) {
+		this.number = number;
+	}
+	public Integer getAllScore() {
+		return allScore;
+	}
+	public void setAllScore(Integer allScore) {
+		this.allScore = allScore;
+	}
+	public Integer getPaperScore() {
+		return paperScore;
+	}
+	public void setPaperScore(Integer paperScore) {
+		this.paperScore = paperScore;
+	}
 	
 }

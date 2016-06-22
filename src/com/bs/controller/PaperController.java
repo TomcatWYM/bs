@@ -48,7 +48,7 @@ public class PaperController extends BaseController  {
 	 *  
 	 * @return
 	 */
-	@RequestMapping("/CreateType.do")
+	@RequestMapping("/createType.do")
 	public String CreateType(Model model){
 		 
 		

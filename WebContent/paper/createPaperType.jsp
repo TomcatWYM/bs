@@ -23,7 +23,7 @@
 								<div class="col-sm-2">试卷名称：</div>
 								<div class="col-sm-6">
 									<input type="text" class="form-control" id="paperName"
-										value="**试卷">
+										value="**试卷"name="title">
 								</div>
 							</div>
 							<div class="row">
@@ -50,7 +50,7 @@
 							<div class="row">
 								<div class="col-sm-2">试卷标签：</div>
 								<div class="col-sm-6">
-									<input type="text" class="form-control" value="分号；隔开"
+									<input type="text" class="form-control" name="label" value="例：<test>"
 										id="paperTitle">
 								</div>
 							</div>
