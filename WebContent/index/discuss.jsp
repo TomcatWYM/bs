@@ -55,8 +55,10 @@
 											回复：100&nbsp;赞：0&nbsp;浏览次数:0</div>
 									</div>
 								</div>
-								<div class="col-sm-12"><hr style="height: 1px; border-color: #F0F0F0;" width="100%" /></div>
-								
+								<div class="col-sm-12">
+									<hr style="height: 1px; border-color: #F0F0F0;" width="100%" />
+								</div>
+
 							</div>
 							<div class="row content">
 								<div class="col-sm-1" style="margin-bottom: 10px;">
@@ -72,7 +74,9 @@
 											回复：100&nbsp;赞：0&nbsp;浏览次数:0</div>
 									</div>
 								</div>
-								<div class="col-sm-12"><hr style="height: 1px; border-color: #F0F0F0;" width="100%" /></div>
+								<div class="col-sm-12">
+									<hr style="height: 1px; border-color: #F0F0F0;" width="100%" />
+								</div>
 							</div>
 						</div>
 						<!--end 						具体讨论的内容 -->

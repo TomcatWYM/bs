@@ -86,7 +86,7 @@
 
 	<%@include file="sendMessageModal.jsp"%>
 	<%@include file="findFriendModal.jsp"%>
-    <script type="text/javascript">
+	<script type="text/javascript">
         $(function(){
             $(".list-group-item").click(function(){
                 var type = $(this).attr('id');

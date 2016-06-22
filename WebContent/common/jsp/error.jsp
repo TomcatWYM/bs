@@ -1,24 +1,29 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
 <html>
-  <head>
-	<%@ include file="head_file.jspf" %>
-  </head>
-  
-  <body>
-    	<div class="container">
-    		<%@ include file="../../index/head.jspf" %>
-    		<div class="row" style="margin-top: 70px ">
-    				<div class="jumbotron">
-					  <h2>${msg}</h2>
-					  <br>
-					  <center ><p id="cnt" style="color: red">5秒后返回主页...</p> <p><a class="btn btn-primary" onclick="history.go(-1);">点我立即返回</a></p></center>
-					 
-					</div>
-    		</div>
-    		
-    	</div>
-    	<script type="text/javascript">
+<head>
+<%@ include file="head_file.jspf"%>
+</head>
+
+<body>
+	<div class="container">
+		<%@ include file="../../index/head.jspf"%>
+		<div class="row" style="margin-top: 70px">
+			<div class="jumbotron">
+				<h2>${msg}</h2>
+				<br>
+				<center>
+					<p id="cnt" style="color: red">5秒后返回主页...</p>
+					<p>
+						<a class="btn btn-primary" onclick="history.go(-1);">点我立即返回</a>
+					</p>
+				</center>
+
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript">
     		var cnt = 5;
 	    	function count(){
 				cnt--;
@@ -39,5 +44,5 @@
     		
     	</script>
 
-  </body>
+</body>
 </html>

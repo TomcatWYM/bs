@@ -6,12 +6,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
-    <base href="<%=basePath%>">
-    <title>教学质量评估系统</title>
-  </head>
-  
-  <body>
-  	<jsp:forward page="index.do"></jsp:forward>
-  </body>
+<head>
+<base href="<%=basePath%>">
+<title>教学质量评估系统</title>
+</head>
+
+<body>
+	<jsp:forward page="index.do"></jsp:forward>
+</body>
 </html>

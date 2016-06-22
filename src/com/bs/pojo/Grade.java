@@ -6,8 +6,12 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.apache.lucene.facet.taxonomy.IntTaxonomyFacets;
 /**
  * 成绩表
  * 
@@ -19,42 +23,44 @@ import javax.persistence.Table;
 @Table(name = "grade")
 public class Grade {
 	@Id
+	 @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "id",nullable=false)
-	private String  id; 
+	private Integer  ID; 
+	
 	
 	@Column
-	private String userID;//考试的人的id
+	private String studentID;//考试的人的id
 	@Column
-	private int score;//考试成绩
+	private Integer score;//考试成绩
 	@Column
-	private String isAll;//是否是最终成绩
+	private Integer proID;//试题ID
 	@Column
 	private Date createDate;//成绩的创建日期
-	
-	
-	public String getId() {
-		return id;
+	@Column
+	private Integer teacherID;//最后修改人
+	public Integer getID() {
+		return ID;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setID(Integer iD) {
+		ID = iD;
 	}
-	public String getUserID() {
-		return userID;
+	public String getStudentID() {
+		return studentID;
 	}
-	public void setUserID(String userID) {
-		this.userID = userID;
+	public void setStudentID(String studentID) {
+		this.studentID = studentID;
 	}
-	public int getScore() {
+	public Integer getScore() {
 		return score;
 	}
-	public void setScore(int score) {
+	public void setScore(Integer score) {
 		this.score = score;
 	}
-	public String getIsAll() {
-		return isAll;
+	public Integer getProID() {
+		return proID;
 	}
-	public void setIsAll(String isAll) {
-		this.isAll = isAll;
+	public void setProID(Integer proID) {
+		this.proID = proID;
 	}
 	public Date getCreateDate() {
 		return createDate;
@@ -62,7 +68,11 @@ public class Grade {
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
+	public Integer getTeacherID() {
+		return teacherID;
+	}
+	public void setTeacherID(Integer teacherID) {
+		this.teacherID = teacherID;
+	}
 	 
-	
-	
 }

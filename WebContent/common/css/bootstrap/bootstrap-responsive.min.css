@@ -11,7 +11,7 @@
 	*zoom: 1
 }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before,.clearfix:after {
 	display: table;
 	line-height: 0;
 	content: ""
@@ -112,7 +112,7 @@
 		margin-left: -30px;
 		*zoom: 1
 	}
-	.row:before, .row:after {
+	.row:before,.row:after {
 		display: table;
 		line-height: 0;
 		content: ""
@@ -125,8 +125,8 @@
 		min-height: 1px;
 		margin-left: 30px
 	}
-	.container, .navbar-static-top .container, .navbar-fixed-top .container,
-		.navbar-fixed-bottom .container {
+	.container,.navbar-static-top .container,.navbar-fixed-top .container,.navbar-fixed-bottom .container
+		{
 		width: 1170px
 	}
 	.span12 {
@@ -205,7 +205,7 @@
 		width: 100%;
 		*zoom: 1
 	}
-	.row-fluid:before, .row-fluid:after {
+	.row-fluid:before,.row-fluid:after {
 		display: table;
 		line-height: 0;
 		content: ""
@@ -374,46 +374,46 @@
 		margin-left: 8.547008547008547%;
 		*margin-left: 8.440625568285142%
 	}
-	input, textarea, .uneditable-input {
+	input,textarea,.uneditable-input {
 		margin-left: 0
 	}
 	.controls-row [class*="span"]+[class*="span"] {
 		margin-left: 30px
 	}
-	input.span12, textarea.span12, .uneditable-input.span12 {
+	input.span12,textarea.span12,.uneditable-input.span12 {
 		width: 1156px
 	}
-	input.span11, textarea.span11, .uneditable-input.span11 {
+	input.span11,textarea.span11,.uneditable-input.span11 {
 		width: 1056px
 	}
-	input.span10, textarea.span10, .uneditable-input.span10 {
+	input.span10,textarea.span10,.uneditable-input.span10 {
 		width: 956px
 	}
-	input.span9, textarea.span9, .uneditable-input.span9 {
+	input.span9,textarea.span9,.uneditable-input.span9 {
 		width: 856px
 	}
-	input.span8, textarea.span8, .uneditable-input.span8 {
+	input.span8,textarea.span8,.uneditable-input.span8 {
 		width: 756px
 	}
-	input.span7, textarea.span7, .uneditable-input.span7 {
+	input.span7,textarea.span7,.uneditable-input.span7 {
 		width: 656px
 	}
-	input.span6, textarea.span6, .uneditable-input.span6 {
+	input.span6,textarea.span6,.uneditable-input.span6 {
 		width: 556px
 	}
-	input.span5, textarea.span5, .uneditable-input.span5 {
+	input.span5,textarea.span5,.uneditable-input.span5 {
 		width: 456px
 	}
-	input.span4, textarea.span4, .uneditable-input.span4 {
+	input.span4,textarea.span4,.uneditable-input.span4 {
 		width: 356px
 	}
-	input.span3, textarea.span3, .uneditable-input.span3 {
+	input.span3,textarea.span3,.uneditable-input.span3 {
 		width: 256px
 	}
-	input.span2, textarea.span2, .uneditable-input.span2 {
+	input.span2,textarea.span2,.uneditable-input.span2 {
 		width: 156px
 	}
-	input.span1, textarea.span1, .uneditable-input.span1 {
+	input.span1,textarea.span1,.uneditable-input.span1 {
 		width: 56px
 	}
 	.thumbnails {
@@ -432,7 +432,7 @@
 		margin-left: -20px;
 		*zoom: 1
 	}
-	.row:before, .row:after {
+	.row:before,.row:after {
 		display: table;
 		line-height: 0;
 		content: ""
@@ -445,8 +445,8 @@
 		min-height: 1px;
 		margin-left: 20px
 	}
-	.container, .navbar-static-top .container, .navbar-fixed-top .container,
-		.navbar-fixed-bottom .container {
+	.container,.navbar-static-top .container,.navbar-fixed-top .container,.navbar-fixed-bottom .container
+		{
 		width: 724px
 	}
 	.span12 {
@@ -525,7 +525,7 @@
 		width: 100%;
 		*zoom: 1
 	}
-	.row-fluid:before, .row-fluid:after {
+	.row-fluid:before,.row-fluid:after {
 		display: table;
 		line-height: 0;
 		content: ""
@@ -694,46 +694,46 @@
 		margin-left: 8.56353591160221%;
 		*margin-left: 8.457152932878806%
 	}
-	input, textarea, .uneditable-input {
+	input,textarea,.uneditable-input {
 		margin-left: 0
 	}
 	.controls-row [class*="span"]+[class*="span"] {
 		margin-left: 20px
 	}
-	input.span12, textarea.span12, .uneditable-input.span12 {
+	input.span12,textarea.span12,.uneditable-input.span12 {
 		width: 710px
 	}
-	input.span11, textarea.span11, .uneditable-input.span11 {
+	input.span11,textarea.span11,.uneditable-input.span11 {
 		width: 648px
 	}
-	input.span10, textarea.span10, .uneditable-input.span10 {
+	input.span10,textarea.span10,.uneditable-input.span10 {
 		width: 586px
 	}
-	input.span9, textarea.span9, .uneditable-input.span9 {
+	input.span9,textarea.span9,.uneditable-input.span9 {
 		width: 524px
 	}
-	input.span8, textarea.span8, .uneditable-input.span8 {
+	input.span8,textarea.span8,.uneditable-input.span8 {
 		width: 462px
 	}
-	input.span7, textarea.span7, .uneditable-input.span7 {
+	input.span7,textarea.span7,.uneditable-input.span7 {
 		width: 400px
 	}
-	input.span6, textarea.span6, .uneditable-input.span6 {
+	input.span6,textarea.span6,.uneditable-input.span6 {
 		width: 338px
 	}
-	input.span5, textarea.span5, .uneditable-input.span5 {
+	input.span5,textarea.span5,.uneditable-input.span5 {
 		width: 276px
 	}
-	input.span4, textarea.span4, .uneditable-input.span4 {
+	input.span4,textarea.span4,.uneditable-input.span4 {
 		width: 214px
 	}
-	input.span3, textarea.span3, .uneditable-input.span3 {
+	input.span3,textarea.span3,.uneditable-input.span3 {
 		width: 152px
 	}
-	input.span2, textarea.span2, .uneditable-input.span2 {
+	input.span2,textarea.span2,.uneditable-input.span2 {
 		width: 90px
 	}
-	input.span1, textarea.span1, .uneditable-input.span1 {
+	input.span1,textarea.span1,.uneditable-input.span1 {
 		width: 28px
 	}
 }
@@ -743,7 +743,7 @@
 		padding-right: 20px;
 		padding-left: 20px
 	}
-	.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+	.navbar-fixed-top,.navbar-fixed-bottom,.navbar-static-top {
 		margin-right: -20px;
 		margin-left: -20px
 	}
@@ -765,14 +765,14 @@
 	.row-fluid {
 		width: 100%
 	}
-	.row, .thumbnails {
+	.row,.thumbnails {
 		margin-left: 0
 	}
 	.thumbnails>li {
 		float: none;
 		margin-left: 0
 	}
-	[class*="span"], .uneditable-input[class*="span"], .row-fluid [class*="span"]
+	[class*="span"],.uneditable-input[class*="span"],.row-fluid [class*="span"]
 		{
 		display: block;
 		float: none;
@@ -782,7 +782,7 @@
 		-moz-box-sizing: border-box;
 		box-sizing: border-box
 	}
-	.span12, .row-fluid .span12 {
+	.span12,.row-fluid .span12 {
 		width: 100%;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
@@ -791,8 +791,8 @@
 	.row-fluid [class*="offset"]:first-child {
 		margin-left: 0
 	}
-	.input-large, .input-xlarge, .input-xxlarge, input[class*="span"],
-		select[class*="span"], textarea[class*="span"], .uneditable-input {
+	.input-large,.input-xlarge,.input-xxlarge,input[class*="span"],select[class*="span"],textarea[class*="span"],.uneditable-input
+		{
 		display: block;
 		width: 100%;
 		min-height: 30px;
@@ -800,8 +800,8 @@
 		-moz-box-sizing: border-box;
 		box-sizing: border-box
 	}
-	.input-prepend input, .input-append input, .input-prepend input[class*="span"],
-		.input-append input[class*="span"] {
+	.input-prepend input,.input-append input,.input-prepend input[class*="span"],.input-append input[class*="span"]
+		{
 		display: inline-block;
 		width: auto
 	}
@@ -832,7 +832,7 @@
 		display: block;
 		line-height: 20px
 	}
-	input[type="checkbox"], input[type="radio"] {
+	input[type="checkbox"],input[type="radio"] {
 		border: 1px solid #ccc
 	}
 	.form-horizontal .control-label {
@@ -851,7 +851,7 @@
 		padding-right: 10px;
 		padding-left: 10px
 	}
-	.media .pull-left, .media .pull-right {
+	.media .pull-left,.media .pull-right {
 		display: block;
 		float: none;
 		margin-bottom: 10px
@@ -878,7 +878,7 @@
 	body {
 		padding-top: 0
 	}
-	.navbar-fixed-top, .navbar-fixed-bottom {
+	.navbar-fixed-top,.navbar-fixed-bottom {
 		position: static
 	}
 	.navbar-fixed-top {
@@ -887,7 +887,7 @@
 	.navbar-fixed-bottom {
 		margin-top: 20px
 	}
-	.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+	.navbar-fixed-top .navbar-inner,.navbar-fixed-bottom .navbar-inner {
 		padding: 5px
 	}
 	.navbar .container {
@@ -919,7 +919,7 @@
 		color: #777;
 		text-shadow: none
 	}
-	.nav-collapse .nav>li>a, .nav-collapse .dropdown-menu a {
+	.nav-collapse .nav>li>a,.nav-collapse .dropdown-menu a {
 		padding: 9px 15px;
 		font-weight: bold;
 		color: #777;
@@ -937,17 +937,15 @@
 	.nav-collapse .dropdown-menu li+li a {
 		margin-bottom: 2px
 	}
-	.nav-collapse .nav>li>a:hover, .nav-collapse .nav>li>a:focus,
-		.nav-collapse .dropdown-menu a:hover, .nav-collapse .dropdown-menu a:focus
+	.nav-collapse .nav>li>a:hover,.nav-collapse .nav>li>a:focus,.nav-collapse .dropdown-menu a:hover,.nav-collapse .dropdown-menu a:focus
 		{
 		background-color: #f2f2f2
 	}
-	.navbar-inverse .nav-collapse .nav>li>a, .navbar-inverse .nav-collapse .dropdown-menu a
+	.navbar-inverse .nav-collapse .nav>li>a,.navbar-inverse .nav-collapse .dropdown-menu a
 		{
 		color: #999
 	}
-	.navbar-inverse .nav-collapse .nav>li>a:hover, .navbar-inverse .nav-collapse .nav>li>a:focus,
-		.navbar-inverse .nav-collapse .dropdown-menu a:hover, .navbar-inverse .nav-collapse .dropdown-menu a:focus
+	.navbar-inverse .nav-collapse .nav>li>a:hover,.navbar-inverse .nav-collapse .nav>li>a:focus,.navbar-inverse .nav-collapse .dropdown-menu a:hover,.navbar-inverse .nav-collapse .dropdown-menu a:focus
 		{
 		background-color: #111
 	}
@@ -976,18 +974,17 @@
 	.nav-collapse .open>.dropdown-menu {
 		display: block
 	}
-	.nav-collapse .dropdown-menu:before, .nav-collapse .dropdown-menu:after
-		{
+	.nav-collapse .dropdown-menu:before,.nav-collapse .dropdown-menu:after {
 		display: none
 	}
 	.nav-collapse .dropdown-menu .divider {
 		display: none
 	}
-	.nav-collapse .nav>li>.dropdown-menu:before, .nav-collapse .nav>li>.dropdown-menu:after
+	.nav-collapse .nav>li>.dropdown-menu:before,.nav-collapse .nav>li>.dropdown-menu:after
 		{
 		display: none
 	}
-	.nav-collapse .navbar-form, .nav-collapse .navbar-search {
+	.nav-collapse .navbar-form,.nav-collapse .navbar-search {
 		float: none;
 		padding: 10px 15px;
 		margin: 10px 0;
@@ -1000,7 +997,7 @@
 		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0
 			rgba(255, 255, 255, 0.1)
 	}
-	.navbar-inverse .nav-collapse .navbar-form, .navbar-inverse .nav-collapse .navbar-search
+	.navbar-inverse .nav-collapse .navbar-form,.navbar-inverse .nav-collapse .navbar-search
 		{
 		border-top-color: #111;
 		border-bottom-color: #111
@@ -1009,7 +1006,7 @@
 		float: none;
 		margin-left: 0
 	}
-	.nav-collapse, .nav-collapse.collapse {
+	.nav-collapse,.nav-collapse.collapse {
 		height: 0;
 		overflow: hidden
 	}

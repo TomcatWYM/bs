@@ -18,4 +18,4 @@
 				class="btn btn-info" id="classessIndex">班级主页</a></td>
 		</tr>
 	</tbody>
-	</table>
+</table>

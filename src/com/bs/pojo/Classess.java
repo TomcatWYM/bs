@@ -19,8 +19,9 @@ import javax.persistence.Table;
 @Table(name = "classess")
 public class Classess {
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "id",nullable=false)
-	private String  id; 
+	private String  ID; 
 	 
 	@Column
 	private String name;//班级的名字
@@ -29,20 +30,18 @@ public class Classess {
 	@Column
 	private String TeacherID;//教师id
 	@Column
-	private int studentNumber;//学生数量
+	private Integer studentNumber;//学生数量
 	@Column
-	private int teacherNumber;//教师数量
+	private Integer teacherNumber;//教师数量
 	@Column
 	private String headerTeacherID;//班主任id
 	@Column
 	private String paperID;//试卷id
-	
-	
-	public String getId() {
-		return id;
+	public String getID() {
+		return ID;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setID(String iD) {
+		ID = iD;
 	}
 	public String getName() {
 		return name;
@@ -62,16 +61,16 @@ public class Classess {
 	public void setTeacherID(String teacherID) {
 		TeacherID = teacherID;
 	}
-	public int getStudentNumber() {
+	public Integer getStudentNumber() {
 		return studentNumber;
 	}
-	public void setStudentNumber(int studentNumber) {
+	public void setStudentNumber(Integer studentNumber) {
 		this.studentNumber = studentNumber;
 	}
-	public int getTeacherNumber() {
+	public Integer getTeacherNumber() {
 		return teacherNumber;
 	}
-	public void setTeacherNumber(int teacherNumber) {
+	public void setTeacherNumber(Integer teacherNumber) {
 		this.teacherNumber = teacherNumber;
 	}
 	public String getHeaderTeacherID() {
@@ -86,7 +85,6 @@ public class Classess {
 	public void setPaperID(String paperID) {
 		this.paperID = paperID;
 	}
-	
 	
 	 
 }

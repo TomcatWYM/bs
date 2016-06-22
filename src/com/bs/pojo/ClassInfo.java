@@ -6,6 +6,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 /**
@@ -19,8 +21,9 @@ import javax.persistence.Table;
 @Table(name = "classInfo")
 public class ClassInfo {
 	@Id
+	 @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "id",nullable=false)
-	private String  id; 
+	private Integer  ID; 
 	 
 	@Column
 	private String title;//标题
@@ -34,13 +37,11 @@ public class ClassInfo {
 	private String isShow;//是否显示在主页
 	@Column
 	private String isDowload;//是否是下载的资料
-	
-	
-	public String getId() {
-		return id;
+	public Integer getID() {
+		return ID;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setID(Integer iD) {
+		ID = iD;
 	}
 	public String getTitle() {
 		return title;
@@ -79,6 +80,5 @@ public class ClassInfo {
 		this.isDowload = isDowload;
 	}
 	
-	
-	
+	 
 }

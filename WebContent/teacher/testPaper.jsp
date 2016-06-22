@@ -19,9 +19,8 @@
 					<td>武玉密</td>
 					<td>2015-5-12</td>
 					<td>60分钟</td>
-					<td><a class="btn btn-info" id="deletePaper">删除</a>
-						<a class="btn btn-info" id="updatePaper">修改</a>
-					</td>
+					<td><a class="btn btn-info" id="deletePaper">删除</a> <a
+						class="btn btn-info" id="updatePaper">修改</a></td>
 				</tr>
 			</tbody>
 		</table>

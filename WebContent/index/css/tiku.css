@@ -3,9 +3,11 @@
 .container {
 	margin-top: 80px;
 }
-.top{
+
+.top {
 	margin-top: 10px;
 }
+
 .pad {
 	padding: 5px;
 	margin-top: 10px;
@@ -59,38 +61,46 @@
 	padding: 10px;
 	text-align: left;
 }
-.left_div_shuzi{
+
+.left_div_shuzi {
 	width: 25px;
 	height: 35px;
 	padding: 0px !important;
 }
-.left_div_shuzi img{
+
+.left_div_shuzi img {
 	width: 20px;
 	height: 30px;
 }
-.no_pad{
+
+.no_pad {
 	padding: 0px;
 }
-.div_one{
+
+.div_one {
 	width: 25px;
 	height: 35px;
 	float: left;
 }
-.div_two{
+
+.div_two {
 	margin-left: 25px;
-	 padding: 8px 0px 3px 0px;
-	 text-align: left;
+	padding: 8px 0px 3px 0px;
+	text-align: left;
 }
-.select_table button{
+
+.select_table button {
 	margin-top: 5px
 }
-.tiku_op{
-	padding:5px;
+
+.tiku_op {
+	padding: 5px;
 	background-color: #f5f5f5;
 }
-.tiku_op input{
-	width:80px;
-	height:40px;
+
+.tiku_op input {
+	width: 80px;
+	height: 40px;
 	background-color: #f1f7f9;
 	border: 0px;
 	color: #5bc0de;

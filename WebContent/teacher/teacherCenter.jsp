@@ -39,8 +39,8 @@
 								class="list-group-item" id="friend">我的好友</a> <a
 								class="list-group-item" id="classess">我的班级</a> <a
 								class="list-group-item" id="password"> 密码修改</a> <a
-								class="list-group-item" id="showGrade">试卷</a>
-								 <a class="list-group-item" id="classessIndex">班级主页设置</a>
+								class="list-group-item" id="showGrade">试卷</a> <a
+								class="list-group-item" id="classessIndex">班级主页设置</a>
 						</div>
 					</div>
 					<!-- col-xs-3 -->
@@ -53,8 +53,8 @@
 								data-target="#sendMessageModal">发送消息</button>
 							<button type="button" class="btn btn-info" data-toggle="modal"
 								data-target="#findFriend">添加好友</button>
-								<button class="btn btn-info"   >添加试题</button>
-								<button class="btn btn-info"   >组卷</button>
+							<button class="btn btn-info">添加试题</button>
+							<button class="btn btn-info">组卷</button>
 						</div>
 						<div class="row">
 							<div class="panel panel-default" style="margin-left: 10px;">

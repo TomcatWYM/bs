@@ -11,7 +11,7 @@ a {
 	text-decoration: none;
 }
 
-h1, h2 {
+h1,h2 {
 	width: 100%;
 	float: left;
 }
@@ -93,7 +93,7 @@ pre code {
 	line-height: 140%;
 }
 
-.reload, .btn {
+.reload,.btn {
 	display: inline-block;
 	border: 4px solid #A2261E;
 	border-radius: 5px;
@@ -128,7 +128,7 @@ pre code {
 	width: auto;
 }
 
-.btn:hover, .btn:hover {
+.btn:hover,.btn:hover {
 	background: rgba(0, 0, 0, 0.8);
 }
 
@@ -178,26 +178,26 @@ pre code {
 	background: rgba(0, 0, 0, 0.85);
 }
 
-.page_container, .other {
+.page_container,.other {
 	max-width: 800px;
 	margin: 50px auto;
 }
 
-.page_container h2, .page_container h1, .other h2, .other h1 {
+.page_container h2,.page_container h1,.other h2,.other h1 {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 	padding-bottom: 15px;
 }
 
-.page_container h2, .page_container h3, .other h3, .other h2 {
+.page_container h2,.page_container h3,.other h3,.other h2 {
 	text-align: left;
 }
 
-.page_container h2, .page_container h1, .page_container h3, .other h2,
-	.other h1, .other h3 {
+.page_container h2,.page_container h1,.page_container h3,.other h2,.other h1,.other h3
+	{
 	color: black;
 }
 
-.page_container p, .other p {
+.page_container p,.other p {
 	color: black;
 	font-size: 18px;
 	line-height: 180%;

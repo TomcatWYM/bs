@@ -86,20 +86,22 @@
 			</div>
 		</div>
 		<div class="row">
-<hr
-					style="height: 2px; border: none; border-top: 2px solid #185598;" />
-			
+			<hr style="height: 2px; border: none; border-top: 2px solid #185598;" />
+
 			<div class="row">
-			<div class="col-sm-3"><img src="./images/p1.PNG" width="150px" height="150px"></div>
-			<div class="col-sm-3"><img src="./images/p1.PNG" width="150px" height="150px"></div>
-			<div class="col-sm-3"></div>
-			<div class="col-sm-3"></div>
-					
-				
+				<div class="col-sm-3">
+					<img src="./images/p1.PNG" width="150px" height="150px">
+				</div>
+				<div class="col-sm-3">
+					<img src="./images/p1.PNG" width="150px" height="150px">
+				</div>
+				<div class="col-sm-3"></div>
+				<div class="col-sm-3"></div>
+
+
 			</div>
-			<hr
-					style="height: 2px; border: none; border-top: 2px solid #185598;" />
-			
+			<hr style="height: 2px; border: none; border-top: 2px solid #185598;" />
+
 		</div>
 
 	</div>
