@@ -4,6 +4,8 @@ package com.bs.pojo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 /**
@@ -17,8 +19,9 @@ import javax.persistence.Table;
 @Table(name = "admin")
 public class Admin {
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "id",nullable=false)
-	private String  id; 
+	private Integer  ID; 
 	 
 	@Column
 	private String name;//姓 名
@@ -26,22 +29,29 @@ public class Admin {
 	@Column
 	private String password;//密码
 
-	public String getId() {
-		return id;
+	public Integer getID() {
+		return ID;
 	}
-	public void setId(String id) {
-		this.id = id;
+
+	public void setID(Integer iD) {
+		ID = iD;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	 
 }

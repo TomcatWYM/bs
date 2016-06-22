@@ -11,9 +11,7 @@
 <body>
 	<%@ include file="./head.jspf"%>
 	<div class="container">
-		<div class="row">
-			
-		</div>
+		<div class="row"></div>
 	</div>
 	<%@include file="../common/jsp/footer.jsp"%>
 </body>

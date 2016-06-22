@@ -1,29 +1,37 @@
 @CHARSET "utf-8";
-.left{
+
+.left {
 	margin-left: 10px;
 }
-.top{
+
+.top {
 	margin-top: 10px;
 }
-.right{
+
+.right {
 	margin-right: 10px;
 }
-.bottm{
+
+.bottm {
 	margin-bottom: 10px;
 }
-.todayArticle{
+
+.todayArticle {
 	padding: 0px;
-	border:1px solid #aaa;
+	border: 1px solid #aaa;
 }
-.articleTitle{
+
+.articleTitle {
 	text-align: center;
 	font-size: large;
 }
-.show_author{
+
+.show_author {
 	font-size: small;
 	color: #f90;
 }
-.col-sm-4{
+
+.col-sm-4 {
 	margin: 5px;
 	width: 380px;
 }

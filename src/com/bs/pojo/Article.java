@@ -3,6 +3,8 @@ package com.bs.pojo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 /**
@@ -15,8 +17,9 @@ import javax.persistence.Table;
 @Table(name = "article")
 public class Article {
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "articleid",nullable=false)
-	private String  articleid; 
+	private Integer  articleID; 
 	 
 	@Column
 	private String title; //标题
@@ -34,12 +37,12 @@ public class Article {
 	@Column
 	private String showNuber; //查看数量
 
-	public String getArticleid() {
-		return articleid;
+	public Integer getArticleID() {
+		return articleID;
 	}
 
-	public void setArticleid(String articleid) {
-		this.articleid = articleid;
+	public void setArticleID(Integer articleID) {
+		this.articleID = articleID;
 	}
 
 	public String getTitle() {
@@ -97,5 +100,5 @@ public class Article {
 	public void setShowNuber(String showNuber) {
 		this.showNuber = showNuber;
 	}
-	 
+ 
 }

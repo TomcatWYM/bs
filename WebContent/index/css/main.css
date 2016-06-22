@@ -54,7 +54,7 @@ a {
 	font-weight: normal
 }
 
-.mainGallery .left, .mainGallery .right {
+.mainGallery .left,.mainGallery .right {
 	width: 50px;
 	padding: 150px 10px 10px 10px;
 }
@@ -191,12 +191,13 @@ a {
 .z_a_font a {
 	color: #fff;
 }
- 
-.form_z{
+
+.form_z {
 	margin: 10px;
 }
-.number_pic{
-	float:left;
+
+.number_pic {
+	float: left;
 	width: 20px;
 	height: 20px;
 }

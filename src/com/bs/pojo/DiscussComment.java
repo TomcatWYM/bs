@@ -2,6 +2,8 @@ package com.bs.pojo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 /**
@@ -14,8 +16,9 @@ import javax.persistence.Table;
 @Table(name = "articlecomment")
 public class DiscussComment {
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "id",nullable=false)
-	private String  id; 
+	private Integer  ID; 
 	 
 	@Column
 	private String content; // 评论内容
@@ -27,11 +30,11 @@ public class DiscussComment {
 	private String useredId; //被评论的用户id
 	@Column
 	private String number; // 第n条回复
-	public String getId() {
-		return id;
+	public Integer getID() {
+		return ID;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setID(Integer iD) {
+		ID = iD;
 	}
 	public String getContent() {
 		return content;
@@ -63,6 +66,6 @@ public class DiscussComment {
 	public void setNumber(String number) {
 		this.number = number;
 	}
-	
-	
+	 
+	 
 }

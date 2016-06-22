@@ -10,13 +10,10 @@
 <link rel="stylesheet" type="text/css" href="./css/main.css">
 <link type="text/css" href="./css/mscarousel.css" rel="stylesheet" />
 <body>
-<!-- 主页头部 -->
+	<!-- 主页头部 -->
 	<%@ include file="../../index/head.jspf"%>
-	<div class="container">
-		 
-
-	</div>
-	<%@include file="../jsp/footer.jsp" %>
+	<div class="container"></div>
+	<%@include file="../jsp/footer.jsp"%>
 </body>
 <script type="text/javascript" src="./script/jquery.msCarousel-min.js"></script>
 <script type="text/javascript" src="./script/main.js"></script>

@@ -1,19 +1,25 @@
 @CHARSET "utf-8";
-body{
+
+body {
 	background-color: #EEEEEE;
 }
-.postion{
+
+.postion {
 	padding: 20px 0px;
 }
-.show_book_info p{
+
+.show_book_info p {
 	margin-top: 10px;
 }
-.show_book_info i{
+
+.show_book_info i {
 	color: #f90;
 }
-.panel-default{
+
+.panel-default {
 	width: 1150px
 }
-.p_width{
-	width: 900px;	
+
+.p_width {
+	width: 900px;
 }

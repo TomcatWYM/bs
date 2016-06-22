@@ -24,8 +24,8 @@
 				</div>
 				<div class="row small_border">
 					<div class="col-sm-2">
-						<a href="showbook.jsp"> <img alt="" url="" src="./images/test1.png"
-							class="photo_yuan">作者
+						<a href="showbook.jsp"> <img alt="" url=""
+							src="./images/test1.png" class="photo_yuan">作者
 							<p>领域:少年</p> 简介：啊我I啊是的那就是看撒大家拉升
 						</a>
 					</div>
@@ -71,8 +71,8 @@
 					<div class="row" title="asdasdasd">
 
 						<img alt="" src="./images/1_1.PNG"
-							style="width: 20px; height: 20px; float: left;"> <a href="./showarticle.jsp"
-							style="float: left">话题标题... </a> 张三 
+							style="width: 20px; height: 20px; float: left;"> <a
+							href="./showarticle.jsp" style="float: left">话题标题... </a> 张三
 					</div>
 
 				</div>
@@ -132,7 +132,8 @@
 											style="border-radius: 50px;" />
 									</div>
 									<div class="row ">
-										<img src="./images/1_1.PNG" class="number_pic" /> <a href="./accesspool.jsp">第一条记录</a>
+										<img src="./images/1_1.PNG" class="number_pic" /> <a
+											href="./accesspool.jsp">第一条记录</a>
 									</div>
 									<div class="row">
 										<img src="./images/2_2.PNG" class="number_pic" /> <a>第二条记录</a>
@@ -198,7 +199,7 @@
 					<font class="title_row">话痨</font> <font class="title_small">只说我想说的!</font>
 
 				</div>
-				 
+
 			</div>
 
 			<div class="row">

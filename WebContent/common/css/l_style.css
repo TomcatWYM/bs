@@ -9,13 +9,14 @@
 
 
 body {
-    background: #f8f8f8;
-    /*font-family: 'PT Sans', Helvetica, Arial, sans-serif;*/
-	font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
-    text-align: center;
-    color: #fff;
-    background-image: url("../images/login_bg.jpg");
-	background-size:cover
+	background: #f8f8f8;
+	/*font-family: 'PT Sans', Helvetica, Arial, sans-serif;*/
+	font-family: "Microsoft YaHei", 微软雅黑, "Microsoft JhengHei", 华文细黑,
+		STHeiti, MingLiu;
+	text-align: center;
+	color: #fff;
+	background-image: url("../images/login_bg.jpg");
+	background-size: cover
 }
 .bg{
 	
@@ -64,9 +65,17 @@ form {
     -ms-transition: all .2s;
 }
 
-.page-container input:-moz-placeholder { color: #fff; }
-.page-container input:-ms-input-placeholder { color: #fff; }
-.page-container input::-webkit-input-placeholder { color: #fff; }
+input:-moz-placeholder {
+	color: #fff;
+}
+
+input:-ms-input-placeholder {
+	color: #fff;
+}
+
+input::-webkit-input-placeholder {
+	color: #fff;
+}
 
 .page-container input:focus {
     outline: none;

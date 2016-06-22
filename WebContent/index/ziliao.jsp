@@ -63,8 +63,7 @@
 				<!-- 			显示筛选条件 -->
 				<div class="row ">
 					<table border="0px" class="select_table">
-						<tr>
-						当前位置：首页》题库》test
+						<tr>当前位置：首页》题库》test
 						</tr>
 						<tr>
 							<td width="96px">筛选条件1：</td>
@@ -105,9 +104,8 @@
 						</table>
 					</div>
 					<div class="row tiku_op">
-						<input type="button" value="不显示" />  <input
-							type="button" value="查看详情" /> 
-						<font> 难度系数：0.8-0.9 &nbsp; 浏览量：xx次 </font>
+						<input type="button" value="不显示" /> <input type="button"
+							value="查看详情" /> <font> 难度系数：0.8-0.9 &nbsp; 浏览量：xx次 </font>
 					</div>
 				</div>
 

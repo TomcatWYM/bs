@@ -47,10 +47,10 @@ section {
 				<br />
 				<center>作者</center>
 			</div>
-			<div class="col-sm-9 small_border" style="height:auto;">
+			<div class="col-sm-9 small_border" style="height: auto;">
 				<%@include file="../common/index.html"%>
 				<div class="row" style="text-align: center;">
-					<button class="btn btn-info"> 确认评论</button>
+					<button class="btn btn-info">确认评论</button>
 				</div>
 			</div>
 		</div>

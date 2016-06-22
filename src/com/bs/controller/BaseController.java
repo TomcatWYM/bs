@@ -23,7 +23,9 @@ public class BaseController {
     public static final String STUDENT_PEOPLE_INFO = "student/peopleInfo";
     public static final String STUDENT_FRIEND_LIST = "student/friendList";
 
-
+    public BaseController(){
+    	
+    }
 
 
     @RequestMapping(value="index.do")
@@ -50,6 +52,10 @@ public class BaseController {
 
     @Autowired
     protected FriendShipService friendShipService;
+    @Autowired
+    protected PaperService paperService;
+    @Autowired
+    protected ProblemService problemService;
 
 
     /**
