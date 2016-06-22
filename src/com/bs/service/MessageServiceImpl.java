@@ -47,10 +47,36 @@ public class MessageServiceImpl extends BaseServerImpl<Message> implements Messa
             return ;
         }
         Message message = new Message.MessageBuilder()
-                .setSenderIdAndName(0,"系统")
+                .setSenderIdAndName(sender.getUserID(),sender.getRealName())
                 .setReceiverIdAndName(friendID,receiver.getRealName())
-                .setContent(sender.getUsername()+"("+sender.getRealName()+")"+"要添加您为好友")
+                .setContent("申请添加您为好友")
                 .setMessageTypeAndUserType(MessageType.FRIEND_APPLY,UserType.STUDENT).build();
         super.save(message);
     }
+
+    @Override
+    public void sendApplyAcceptMessage(Integer senderID, Integer receiverID) {
+        Student sender = studentService.getById(senderID);
+        if(sender==null){
+            return ;
+        }
+        Student receiver = studentService.getById(receiverID);
+        if(receiver==null){
+            return ;
+        }
+
+        Message message = new Message.MessageBuilder()
+                .setReceiverIdAndName(receiverID,receiver.getRealName())
+                .setContent("您已经添加"+sender.getRealName()+"为好友")
+                .setMessageTypeAndUserType(MessageType.NOTIFY,UserType.STUDENT).build();
+        super.save(message);
+
+        Message message1 = new Message.MessageBuilder()
+                .setReceiverIdAndName(senderID,sender.getRealName())
+                .setContent(receiver.getRealName()+"已同意添加您为好友")
+                .setMessageTypeAndUserType(MessageType.NOTIFY,UserType.STUDENT).build();
+        super.save(message1);
+    }
+
+
 }

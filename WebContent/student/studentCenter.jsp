@@ -47,7 +47,7 @@
 						<div class="list-group " style="margin-top: 10px;">
 							<a class="list-group-item" id="peopleInfo">查看个人信息</a> <a
 								class="list-group-item" id="message">我的消息</a> <a
-								class="list-group-item" id="friend">我的好友</a> <a
+								class="list-group-item" id="friends">我的好友</a> <a
 								class="list-group-item" id="classess">我的班级</a> <a
 								class="list-group-item" id="password"> 密码修改</a> <a
 								class="list-group-item" id="showGrade">考试</a>
@@ -63,7 +63,7 @@
 							<button type="button" class="btn btn-info" data-toggle="modal"
 								data-target="#sendMessageModal">发送消息</button>
 							<button type="button" class="btn btn-info" data-toggle="modal"
-								data-target="#findFriend">添加好友</button>
+								data-target="#find-friend-modal">添加好友</button>
 							<a class="btn btn-info" id="findClassess">进入班级</a>
 						</div>
 						<div class="row">
@@ -82,22 +82,25 @@
 
 		</div>
 	</div>
+    <jsp:include page="findFriendModal.jsp"/>
+    <jsp:include page="sendMessageModal.jsp"/>
+
 	<%@include file="../common/jsp/footer.jsp"%>
 
-	<%@include file="sendMessageModal.jsp"%>
-	<%@include file="findFriendModal.jsp"%>
-	<script type="text/javascript">
+
+    <script type="text/javascript">
         $(function(){
+
             $(".list-group-item").click(function(){
                 var type = $(this).attr('id');
                 log(type);
                 var $panelBodyContainer = $("#panel-body");
                 var requestUrl = "${pageContext.request.contextPath}/studentCenter/"+type+".do";
                 $.get(requestUrl,{},function(page){
-                    log(page);
                     $panelBodyContainer.html(page);
                 });
             });
+            $("#peopleInfo").click();   //主页默认显示用户信息
         });
     </script>
 

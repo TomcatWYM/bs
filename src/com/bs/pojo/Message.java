@@ -19,6 +19,11 @@ import javax.persistence.*;
 @Entity
 @Table(name = "message")
 public class Message {
+
+    public Message(){
+        this.sendDate = new Date();
+    }
+
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "id",nullable=false)
@@ -51,6 +56,7 @@ public class Message {
         private Message message;
         public MessageBuilder(){
             this.message = new Message();
+
         }
         public MessageBuilder setSenderIdAndName(Integer senderId,String senderName){
             this.message.setSenderID(senderId);
@@ -156,5 +162,9 @@ public class Message {
 
     public void setMessageType(String messageType) {
         this.messageType = messageType;
+        if(messageType.equalsIgnoreCase(MessageType.NOTIFY.getName())){
+            this.senderID=0;
+            this.senderName="系统";
+        }
     }
 }

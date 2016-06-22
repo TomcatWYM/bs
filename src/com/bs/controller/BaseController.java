@@ -1,6 +1,7 @@
 package com.bs.controller;
 
 import com.bs.pojo.FriendShip;
+import com.bs.pojo.Student;
 import com.bs.pojo.InstructsPaper;
 import com.bs.service.UserServiceImpl;
 import com.bs.service.interFace.*;
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
+
 
 @Controller
 public class BaseController {
@@ -19,7 +22,8 @@ public class BaseController {
     public static final String ERROR = "common/jsp/error";
     public static final String LOGIN_REGISTER= "common/jsp/login_register";
     public static final String STUDENT_CENTER = "student/studentCenter";
-    public static final String PEOPLE_INFO = "student/peopleInfo";
+    public static final String STUDENT_PEOPLE_INFO = "student/peopleInfo";
+    public static final String STUDENT_FRIEND_LIST = "student/friendList";
 
     public BaseController(){
     	
@@ -74,5 +78,9 @@ public class BaseController {
     protected String sendError(Model model ,String msg,Log log ,Exception e){
         log.error(msg,e);
         return this.sendError(model,msg);
+    }
+
+    protected Student getStudent(HttpSession session){
+        return (Student) session.getAttribute("student");
     }
 }
