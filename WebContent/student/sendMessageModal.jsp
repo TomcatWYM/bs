@@ -74,7 +74,8 @@
     });
 
     function initModalOnShowEvent(){
-//模态显示的时候
+        alert('ok');
+        //模态显示的时候
         var $sendMessageModal = $('#sendMessageModal');
         $sendMessageModal.on('show.bs.modal',function(){
             $friendSelectedInfo.html('');
