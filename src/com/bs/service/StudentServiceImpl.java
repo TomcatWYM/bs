@@ -31,5 +31,10 @@ public class StudentServiceImpl extends BaseServerImpl<Student> implements Stude
         return s;
     }
 
+    @Override
+    public void updatePwd(Student stu) {
+        getSession().update(stu);
+    }
+
 
 }

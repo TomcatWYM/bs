@@ -49,7 +49,7 @@
 								class="list-group-item" id="message">我的消息</a> <a
 								class="list-group-item" id="friends">我的好友</a> <a
 								class="list-group-item" id="classess">我的班级</a> <a
-								class="list-group-item" id="password"> 密码修改</a> <a
+								class="list-group-item" id="resetPwd"> 密码修改</a> <a
 								class="list-group-item" id="showGrade">考试</a>
 						</div>
 

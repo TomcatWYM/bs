@@ -77,6 +77,7 @@ public class PaperCartController  extends BaseController {
 			return ;
 		}
 		if("add".equals(action)){	//	如果为添加试卷
+            //TODO 都加了 Log了 还用 system.out啊 禁止用这个输入控制台 用 logger.info() 或者 Logger.debug()
 			System.out.println("in-----------------------------------");
 			cart.add(problem);
 		} 

@@ -70,6 +70,7 @@ public class PaperController extends BaseController  {
 	@RequestMapping("/addInstruce.do")
 	public void addInstruce(Model model,String paperInfo,String data,HttpSession session){
 		Paper paper=new Paper();
+        //TODO 每次都实例化 simplateDateFormat 性能？
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		String dateString = formatter.format(new Date());
 		Date createDate=new Date();
@@ -77,6 +78,7 @@ public class PaperController extends BaseController  {
 			createDate = formatter.parse(dateString);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
+            // 禁止用 e.printStackTrace(); 用 logger.error();
 			e.printStackTrace();
 		}
 		paper.setCreateDate(createDate);
@@ -120,6 +122,7 @@ public class PaperController extends BaseController  {
 	 * 根据Id 显示试卷
 	 * @param id
 	 * @return
+     * //TODO 最好不要用 pathVariable 不利于 前后端分离时接口参数的设置
 	 */
 	@RequestMapping("paper/show/{id}.do")
 	public String show(@PathVariable int id,Model model,HttpSession session){
