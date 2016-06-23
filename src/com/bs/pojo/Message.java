@@ -22,6 +22,7 @@ public class Message {
 
     public Message(){
         this.sendDate = new Date();
+
     }
 
 	@Id

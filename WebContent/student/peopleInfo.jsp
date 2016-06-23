@@ -82,9 +82,8 @@
 		</div>
 	</div>
 	<div class="row" style="margin-top: 20px; text-align: center;">
-		<button class="btn btn-info">完善信息</button>
 		<input class="btn btn-info" type="reset" value="重置">
-		<button class="btn btn-info">提交</button>
+		<input class="btn btn-info"  value="提交">
 	</div>
 
 </form>
