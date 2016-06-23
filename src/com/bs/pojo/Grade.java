@@ -29,32 +29,36 @@ public class Grade {
 	
 	
 	@Column
-	private String studentID;//考试的人的id
+	private Integer studentID;//考试的人的id
 	@Column
-	private Integer score;//考试成绩
+	private Integer allScore;//考试成绩
 	@Column
-	private Integer proID;//试题ID
+	private Integer proID;//试卷ID
 	@Column
 	private Date createDate;//成绩的创建日期
 	@Column
 	private Integer teacherID;//最后修改人
+	@Column
+	private String score;//单题成绩
+	@Column
+	private String answer;//所有成绩
 	public Integer getID() {
 		return ID;
 	}
 	public void setID(Integer iD) {
 		ID = iD;
 	}
-	public String getStudentID() {
+	public Integer getStudentID() {
 		return studentID;
 	}
-	public void setStudentID(String studentID) {
+	public void setStudentID(Integer studentID) {
 		this.studentID = studentID;
 	}
-	public Integer getScore() {
-		return score;
+	public Integer getAllScore() {
+		return allScore;
 	}
-	public void setScore(Integer score) {
-		this.score = score;
+	public void setAllScore(Integer allScore) {
+		this.allScore = allScore;
 	}
 	public Integer getProID() {
 		return proID;
@@ -74,5 +78,18 @@ public class Grade {
 	public void setTeacherID(Integer teacherID) {
 		this.teacherID = teacherID;
 	}
+	public String getScore() {
+		return score;
+	}
+	public void setScore(String score) {
+		this.score = score;
+	}
+	public String getAnswer() {
+		return answer;
+	}
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+	
 	 
 }

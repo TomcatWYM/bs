@@ -43,7 +43,7 @@ public class PaperController extends BaseController  {
 	 * 列出所有试卷
 	 * @return
 	 */
-	@RequestMapping("/paper")
+	@RequestMapping("/paper.do")
 	public String paper(Model model){
 		List<Paper> paperList = paperService.findAll();
 		model.addAttribute("paperList", paperList);
@@ -175,7 +175,6 @@ public class PaperController extends BaseController  {
 	 */
 	@RequestMapping("paper/save.do")
 	public String save(String title ,HttpSession session){
-
 		PaperCart cart = (PaperCart) session.getAttribute("paperCart");
 		if(cart==null){
 			return "redirect:/paper/paper/item/1.do";
@@ -187,10 +186,11 @@ public class PaperController extends BaseController  {
 		paper.setLabel(p.getLabel());
 		paper.setTitle(title);
 		Teacher t=(Teacher)session.getAttribute("teacher");
-		paper.setTeacherID(t.getUserID());;
+//		t.getUserID();
+		paper.setTeacherID(1);
 		paperService.updata(paper);
 
-		return "redirect:/paper/paper.do";
+		return "redirect:/teacherCenter/index.do";
 	}
 
 	/**

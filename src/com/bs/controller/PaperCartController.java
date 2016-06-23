@@ -45,7 +45,6 @@ public class PaperCartController  extends BaseController {
 		List<Problem> multChoices = problemService.getByIds(  cart.toArray(cart.getMultChoices()) );
 		List<Problem> judges = problemService.getByIds( cart.toArray(cart.getJudges()) );
 		List<Problem> questions = problemService.getByIds( cart.toArray(cart.getQuestions()));
-		
 		Paper paper=(Paper) session.getAttribute("currentPaperID");
 		List<InstructsPaper> list=instructsPaperService.getByPaperID(paper.getId());
 		model.addAttribute("instructsList",list);
@@ -77,11 +76,9 @@ public class PaperCartController  extends BaseController {
 			return ;
 		}
 		if("add".equals(action)){	//	如果为添加试卷
-			System.out.println("in-----------------------------------");
 			cart.add(problem);
 		} 
 		if("remove".equals(action)){
-			System.out.println("remove-------------------------------");
 			cart.remove(problem);
 		}
 		session.setAttribute("paperCart", cart);

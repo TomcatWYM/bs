@@ -6,22 +6,16 @@
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="stylesheet" type="text/css"
-	href="../common/css/bootstrap/bootstrap.css" />
+	href="${pageContext.request.contextPath}/common/css/bootstrap/bootstrap.css" />
 <link rel="stylesheet" type="text/css"
-	href="../common/css/bootstrap/bootstrap-responsive.css" />
-<link rel="stylesheet" type="text/css" href="../common/css/main.css">
-<link rel="stylesheet" type="text/css" href="../common/script/xcConfirm/css/xcConfirm.css">
+	href="${pageContext.request.contextPath}/common/css/bootstrap/bootstrap-responsive.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/common/css/main.css">
 
-<script type="text/javascript" src="../common/script/requirejs.js"></script>
 <script type="text/javascript"
-	src="../common/script/requirejs-config.js"></script>
+	src="${pageContext.request.contextPath}/common/script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/common/js/common.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/common/script/bootstrap/bootstrap.js"></script>
 <script type="text/javascript"
 	src="${pageContext.request.contextPath}/common/script/bootstrap/bootstrap.min.js"></script>
-        src="../common/script/jquery-1.11.1.min.js"></script>
-<script type="text/javascript"
-        src="../common/script/xcConfirm/js/xcConfirm.js"></script>
-
-<script type="text/javascript"
-        src="../common/js/common.js"></script>
