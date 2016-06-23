@@ -49,7 +49,7 @@
 								class="list-group-item" id="message">我的消息</a> <a
 								class="list-group-item" id="friends">我的好友</a> <a
 								class="list-group-item" id="classess">我的班级</a> <a
-								class="list-group-item" id="password"> 密码修改</a> <a
+								class="list-group-item" id="resetPwd"> 密码修改</a> <a
 								class="list-group-item" id="showGrade">考试</a>
 						</div>
 
@@ -57,10 +57,10 @@
 					<!-- col-xs-3 -->
 					<div class="col-xs-9">
 						<div class="row" style="height: 50px">
-							<a href="" class="btn btn-info" style="margin-left: 10px;">>>返回主页</a>
+							<a href="${pageContext.request.contextPath}/index/main.jsp" class="btn btn-info" style="margin-left: 10px;">>>返回主页</a>
 
 
-							<button type="button" class="btn btn-info" data-toggle="modal"
+							<button type="button" class="btn btn-info" id="send-message" data-toggle="modal"
 								data-target="#sendMessageModal">发送消息</button>
 							<button type="button" class="btn btn-info" data-toggle="modal"
 								data-target="#find-friend-modal">添加好友</button>

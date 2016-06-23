@@ -12,4 +12,6 @@ public interface StudentService extends BaseServer<Student>{
     Student login(User user);
 
     Student getByUserName(String username);
+
+    void updatePwd(Student stu);
 }

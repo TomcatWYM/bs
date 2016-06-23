@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import sun.misc.resources.Messages_es;
 
 import javax.servlet.http.HttpSession;
 
@@ -23,6 +24,11 @@ public class MessageController extends BaseController {
     public BaseResult index(
             @RequestParam() Integer id
     ) {
+        Message  msg = messageService.getById(id);
+        if(msg==null || msg.getId()==null){
+            return BaseResult.createFailure("没有找到要删除的记录");
+        }
+
         messageService.delete(id);
         return BaseResult.createSuccess("删除成功");
     }

@@ -28,7 +28,7 @@
 						</div>
 						请输入信息：
 						<div class="row">
-							<textarea class="form-control" id="message-input-area" rows="6" disabled></textarea>
+							<textarea class="form-control" id="message-input-area" rows="6" ></textarea>
 						</div>
 
 					</div>
@@ -37,8 +37,7 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-				<button type="button" class="btn btn-info" disabled="disabled"
-					id="send-message-btn">发送</button>
+				<button type="button" class="btn btn-info"  id="send-message-btn">发送</button>
 			</div>
 		</div>
 	</div>
@@ -80,12 +79,31 @@
     function initModalOnShowEvent(){
         //模态显示的时候
 
-        $sendMessageModal.on('show.bs.modal',function(){
+        $sendMessageModal.on('show.bs.modal',function(e){
+            var btn = $(e.relatedTarget);
+            var receiverId = btn.data('receiver-id');
+            var receiverName = btn.data('receiver-name');
+            var content = btn.data('content');
+            log(receiverId+' '+receiverName+' '+content);
+            var isReceiverSelected =false;
+            if(receiverId && receiverName && content){
+                isReceiverSelected = true;
+            }
             $friendSelectedInfo.html('');
             $friendSelectedUserId.html('');
             $messageInputArea.val('');
-            $messageInputArea.attr('disabled','disabled');
-            $sendMessageBtn.attr('disabled','disabled');
+            if(!isReceiverSelected){
+
+                $messageInputArea.attr('disabled','disabled');
+                $sendMessageBtn.attr('disabled','disabled');
+            }
+            //如果调用指定了接收人和消息内容
+            if(isReceiverSelected){
+                $friendSelectedInfo.html(receiverName);
+                $friendSelectedUserId.html(receiverId);
+                $messageInputArea.val(content);
+            }
+
         });
     }
 

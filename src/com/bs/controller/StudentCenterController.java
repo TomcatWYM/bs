@@ -1,5 +1,6 @@
 package com.bs.controller;
 
+import com.bs.base.BaseResult;
 import com.bs.pojo.Message;
 import com.bs.pojo.Student;
 import org.apache.commons.logging.Log;
@@ -53,6 +54,8 @@ public class StudentCenterController extends BaseController {
         model.addAttribute("receiveList",messageReceiveList);
         return "student/peopleMessage";
     }
+
+
     @RequestMapping("/friends.do")
     public String friendList(
             HttpSession session
@@ -61,6 +64,15 @@ public class StudentCenterController extends BaseController {
         List<Student> friendList = friendShipService.findFriends(stu.getUserID());
         session.setAttribute("friendList",friendList);
         return STUDENT_FRIEND_LIST;
+    }
+
+
+
+    @RequestMapping("/resetPwd.do")
+    public String resetPed(
+    ){
+        return STUDENT_RESET_PWD;
+
     }
 
 }
