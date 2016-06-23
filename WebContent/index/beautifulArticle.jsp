@@ -56,31 +56,43 @@
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="panel panel-default">
-					<div class="panel-heading">title</div>
+					<div class="panel-heading">a</div>
 					<div class="panel-body">
+						<c:forEach items="${alist }" var = "article">
 						<div class="row">
-							<div class="col-sm-9">文章名字</div>
-							<div class="col-sm-3">作者:</div>
+							<div class="col-sm-9">${article.samllTitle}</div>
+							<div class="col-sm-3">作者:${article.author}</div>
 						</div>
-						<div class="row">
-							<div class="col-sm-9">文章名字</div>
-							<div class="col-sm-3">作者:</div>
-						</div>
+						</c:forEach>
 					</div>
 				</div>
 
 			</div>
 			<div class="col-sm-4">
 				<div class="panel panel-default">
-					<div class="panel-heading">title</div>
-					<div class="panel-body"></div>
+					<div class="panel-heading">b</div>
+					<div class="panel-body">
+						<c:forEach items="${blist }" var = "brticle">
+						<div class="row">
+							<div class="col-sm-9">${brticle.samllTitle}</div>
+							<div class="col-sm-3">作者:${brticle.author}</div>
+						</div>
+						</c:forEach>
+					</div>
 				</div>
 
 			</div>
 			<div class="col-sm-4">
 				<div class="panel panel-default">
-					<div class="panel-heading">title</div>
-					<div class="panel-body"></div>
+					<div class="panel-heading">c</div>
+					<div class="panel-body">
+						<c:forEach items="${clist }" var = "crticle">
+						<div class="row">
+							<div class="col-sm-9">${crticle.samllTitle}</div>
+							<div class="col-sm-3">作者:${crticle.author}</div>
+						</div>
+						</c:forEach>
+					</div>
 				</div>
 
 			</div>

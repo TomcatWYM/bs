@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,6 +30,8 @@ public class Paper implements Serializable{
 	
 	private Date createDate;		//试卷的生成日期
 	private Integer teacherID;		//试卷生成人
+	@Column
+	private Date beginDate;			//开始时间
 	
 	private Integer []singles;		//单选题的题号Id数组
 	private Integer []MultChoices;	//多选题的题号Id数组
@@ -95,6 +98,12 @@ public class Paper implements Serializable{
 	}
 	
 	
+	public Date getBeginDate() {
+		return beginDate;
+	}
+	public void setBeginDate(Date beginDate) {
+		this.beginDate = beginDate;
+	}
 	@Transient
 	public Integer[] getSingles() {
 		return singles;

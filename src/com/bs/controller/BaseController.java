@@ -61,7 +61,10 @@ public class BaseController {
     protected ProblemService problemService;
     @Autowired
     protected InstructsPaperService instructsPaperService ;
-
+    @Autowired
+    protected GradeService gradeService ;
+    @Autowired
+    protected ArticleService articleService;
 
     /**
      * 发送错误

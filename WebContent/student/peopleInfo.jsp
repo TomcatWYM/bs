@@ -4,10 +4,10 @@
 <form action="${pageContext.request.contextPath}/user/update.do" method="post" id='user-info-form'>
 	<div class="row">
 		<div class="col-sm-2">
-			<font style="float: right; margin-top: 7px;">用户名：</font>
+			<font style="float: right; margin-top: 7px;">姓名：</font>
 		</div>
 		<div class="col-sm-4">
-			<input type="text" class="form-control" name="username" value="${stu.username}">
+			<input type="text" class="form-control" value="${stu.username}">
 		</div>
 
 		<div class="col-sm-2">

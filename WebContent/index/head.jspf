@@ -18,7 +18,7 @@
 			<li class="header_menu_list"><span></span><a
 				href="${pageContext.request.contextPath}/index/discuss.jsp">讨论区</a></li>
 			<li class="header_menu_list"><span></span><a
-				href="${pageContext.request.contextPath}/index/beautifulArticle.jsp">美文</a></li>
+				href="${pageContext.request.contextPath}/article/show.do">美文</a></li>
 		</ul>
 	</div>
 	<div id="header_search">

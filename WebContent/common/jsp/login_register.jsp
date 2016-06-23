@@ -56,46 +56,6 @@
 			<%@include file="footer.jsp"%>
 		</div>
 	</div>
-<div class="bg">
-    <div class="page-container">
-        <h1>登录/注册</h1>
-        <form action="${pageContext.request.contextPath}/user/"
-              method="post" id="form">
-            <div>
-                <input type="text" name="email" class="email"
-                       placeholder="邮箱" autocomplete="off"/>
-            </div>
-            <div>
-                <input type="text" name="username" class="username"
-                       placeholder="用户名" autocomplete="off"/>
-            </div>
-            <div>
-                <input type="password" name="password" class="password"
-                       placeholder="密码" oncontextmenu="return false"
-                       onpaste="return false"/>
-            </div>
-            <div>
-                <input type="password" name="re-password" class="re-password"
-                       placeholder="验证密码" oncontextmenu="return false"
-                       onpaste="return false"/>
-            </div>
-            <div>
-                <input class="userType" type="radio" value="student" name="userType" checked>学生
-                <input class="userType" type="radio" value="teacher" name="userType">教师
-            </div>
-            <button id="login" type="button">登录</button>
-            <button id="register" type="button">注册</button>
-        </form>
-    </div>
-    <div style="margin-top: 100px;">
-        <p>If we can only encounter each other rather than stay with each
-            other,then I wish we had never encountered.</p>
-        <p style="margin-top: 20px;">如果只是遇见，不能停留，不如不遇见。</p>
-    </div>
-    <%--<div style="position: absolute;;bottom: 0px; margin-left: 450px;">--%>
-        <%--<%@include file="footer.jsp" %>--%>
-    <%--</div>--%>
-</div>
 </body>
 <script type="text/javascript">
     $(function () {
