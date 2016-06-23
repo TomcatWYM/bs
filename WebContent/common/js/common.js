@@ -4,16 +4,7 @@ function log(_object){
     console.log(_object);
 }
 
-function alert(message){
 
-    var $remodalContainer = $('[data-remodal-id=modal]');
-    $remodalContainer.find('#remodal-body').html(message);
-    $remodalContainer.find('#remodal-title').html('提示消息');
-    $remodalContainer.find('.remodal-confirm').hide();
-    jQuery.noConflict();
-    var $remodal = $remodalContainer.remodal({});
-    $remodal.open();
-}
 
 function alertInfo(message){
     window.wxc.xcConfirm(message, window.wxc.xcConfirm.typeEnum.info);
