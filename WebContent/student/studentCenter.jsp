@@ -57,10 +57,10 @@
 					<!-- col-xs-3 -->
 					<div class="col-xs-9">
 						<div class="row" style="height: 50px">
-							<a href="" class="btn btn-info" style="margin-left: 10px;">>>返回主页</a>
+							<a href="${pageContext.request.contextPath}/index/main.jsp" class="btn btn-info" style="margin-left: 10px;">>>返回主页</a>
 
 
-							<button type="button" class="btn btn-info" data-toggle="modal"
+							<button type="button" class="btn btn-info" id="send-message" data-toggle="modal"
 								data-target="#sendMessageModal">发送消息</button>
 							<button type="button" class="btn btn-info" data-toggle="modal"
 								data-target="#find-friend-modal">添加好友</button>

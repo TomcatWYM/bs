@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.bs.pojo.User;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 
@@ -85,7 +86,32 @@ public class UserController extends BaseController {
     }
 
 
+    @RequestMapping("/update.do")
+    public BaseResult updateStu(
+           Student student,
+           HttpSession session
+    ){
+
+        Student stu = getStudent(session);
+        stu = studentService.getById(stu.getUserID());
+        stu.setUsername(student.getUsername());
+        stu.setRealName(student.getRealName());
+        stu.setSex(student.getSex());
+        stu.setPhoneNumber(student.getPhoneNumber());
+        //stu.setBirthDate(student.getBirthDate());
+        stu.setQq(student.getQq());
+        stu.setWeixin(student.getWeixin());
+        stu.setAddress(student.getAddress());
+        try {
+            studentService.updata(stu);
+            return BaseResult.createSuccess("保存信息成功");
+        }catch (Exception e){
+            return BaseResult.createFailure("保存信息失败!"+e.getMessage());
+        }
+    }
+
     @RequestMapping("/resetPwd.do")
+    @ResponseBody
     public BaseResult resetPed(
             @RequestParam() String pwd,
             @RequestParam() String oldPwd,

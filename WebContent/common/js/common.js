@@ -39,7 +39,7 @@ function autoSelect(){
 
 
 
-function ajaxSuccessHandler(data,isReload,successCallback,failCallback){
+function ajaxSuccessHandler(data,isReload,successCallback,failCallback,callback){
     if(data){
         if(data.success){
             if(isReload){
@@ -56,6 +56,9 @@ function ajaxSuccessHandler(data,isReload,successCallback,failCallback){
                 failCallback(data);
             }
 
+        }
+        if(callback){
+            callback();
         }
     }
 }

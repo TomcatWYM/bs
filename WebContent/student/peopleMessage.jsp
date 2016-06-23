@@ -47,10 +47,10 @@
         </center>
 
         <c:forEach items="${sendList}" var="msg">
-            <div class="panel panel-default" style="margin-top: 10px;">
+            <div class="panel panel-default message-item-panel ${(msg.hasShow==1)?'hasShow':''}" style="margin-top: 10px;">
                 <div class="panel-body">
                     <div class="row">
-                        <font color="#f90"><b>${msg.senderName}</b></font> : ${msg.content}
+                        <font color="#f90"><b>->${msg.receiverName}</b></font> : ${msg.content}
                     </div>
                 </div>
                 <div class="row" style="margin: 5px 10px">
@@ -58,8 +58,11 @@
                             ${msg.sendDate}
                     </div>
                     <div style="float: right">
-                        <button class="btn btn-default">撤销</button>
-                        <button class="btn btn-warning">修改/重新发送</button>
+                        <button class="btn btn-default message-delete-btn" message-id="${msg.id}">撤销</button>
+                        <button class="btn btn-warning message-resend-btn "
+                                receiver-id="${msg.receiverID}" receiver-name="${msg.receiverName}" message-content="${msg.content}">
+                            修改/重新发送
+                        </button>
                     </div>
 
                 </div>
@@ -78,7 +81,7 @@
             var msgId = $btn.attr('message-id');
             if (msgId) {
                 $.get("${pageContext.request.contextPath}/message/delete.do", {id: msgId}, function (data) {
-                    ajaxSuccessHandler(data, false, function () {
+                    ajaxSuccessHandler(data, false, null,null,function () {
                         $btn.parents('.message-item-panel').remove();
                     });
                 });
@@ -98,6 +101,16 @@
                         }
                 )
             }
+        });
+
+        $(".message-resend-btn").click(function(){
+            var receiverId = $(this).attr('receiver-id');
+            var receiverName = $(this).attr('receiver-name');
+            var content = $(this).attr('message-content');
+            $('#send-message').attr('data-receiver-id',receiverId);
+            $('#send-message').attr('data-receiver-name',receiverName);
+            $('#send-message').attr('data-content',content);
+            $('#send-message').click();
         });
     });
 
